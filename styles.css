@@ -1,0 +1,26 @@
+
+body{
+    color:white;
+    background-color: rgba(27, 5, 78, 0.986);
+}
+title{
+    text-align: center;
+    font-weight:bold;
+    color:black;
+    font-size:32px;
+}
+div{
+    margin: 10 px;
+    padding: 50px 10 px 50px 10px;
+    height: 40px;
+    width:180px;
+    display: block;
+    
+    text-align: center;
+   
+}
+.labels{
+    display: inline-block;
+    color:white;
+}
+

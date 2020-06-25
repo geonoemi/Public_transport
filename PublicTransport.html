@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Schedule</title>
+<script src="jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="trams.js"></script>
+<script src="buses.js"></script>
+<script src="trolleys.js"></script>
+<script src="publictransport.js"></script>
+<script>
+ /*működő selected kiírás
+ 
+ $(document).ready(function(){ 
+        $('#vehicles').click(function(){ 
+          console.log($('#vehicles :selected').text());
+        });
+      });*/
+      
+      
+  
+
+</script>
+</head>
+
+<body>
+ 
+    <div class="vehicleDiv">
+        <label class="labels" for="vehicles">Choose a vehicle:</label>
+        <br>
+        
+        <select id="vehicles">
+            <option value="Vehicle">Vehicle</option>
+            <option value="Bus">Bus</option>
+            <option value="Tram">Tram</option>
+            <option value="Trolley">Trolley</option>
+           </select>
+    </div>
+    <br>
+    <div class="optionDiv">
+        
+    </div>
+    
+
+</body>
+</html>
