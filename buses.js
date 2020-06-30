@@ -1,7 +1,7 @@
 let chosenBus="";
   let busFunction=function(){
         let busDiv=$('<div>').attr('id', 'busDiv');
-        let label= $('<label>').text('Choose bus:');   
+        let label= $('<label>').attr('class','labels').text('Choose bus:');   
         $(busDiv).append(label);
         $('.optionDiv').append(busDiv);
         let buses = [

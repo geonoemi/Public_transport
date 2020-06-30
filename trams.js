@@ -3,7 +3,7 @@ let chosenTram="";
 
 let tramFunction=function(){
     let tramsDiv=$('<div>').attr('id', 'tramsDiv');
-    let label= $('<label>').text('Choose tram:');  
+    let label= $('<label>').attr('class','labels').text('Choose tram:');  
     $(tramsDiv).append(label); 
     $('.optionDiv').append(tramsDiv);
     let trams = [
@@ -55,7 +55,7 @@ let select2Station=function(){
     ];
     let stations2Div=$('<div>').attr('id', 'stations2Div');
   
-    let label= $('<label>').text('Choose station:'); 
+    let label= $('<label>').attr('class','labels').text('Choose station:'); 
     $(stations2Div).append(label);  
     $(tramsDiv).append(stations2Div);  
 
@@ -80,7 +80,7 @@ let select3FStation=function(){
     ];
     
     let stations3FDiv=$('<div>').attr('id', 'stations3FDiv');
-    let label= $('<label>').text('Choose station:'); 
+    let label= $('<label>').attr('class','labels').text('Choose station:'); 
     $(stations3FDiv).append(label);  
     $(tramsDiv).append(stations3FDiv);  
 
@@ -98,7 +98,7 @@ let select4Station=function(){
     ];
     
     let stations4Div=$('<div>').attr('id', 'stations4Div');
-    let label= $('<label>').text('Choose station:'); 
+    let label= $('<label>').attr('class','labels').text('Choose station:'); 
     $(stations4Div).append(label);  
     $(tramsDiv).append(stations4Div);  
 

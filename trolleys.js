@@ -1,7 +1,7 @@
 let chosenTrolley="";
 let trolleyFunction=function(){
     let trolleyDiv=$('<div>').attr('id', 'busDiv');
-    let label= $('<label>').text('Choose trolley:'); 
+    let label= $('<label>').attr('class','labels').text('Choose trolley:'); 
     $(trolleyDiv).append(label);  
     $('.optionDiv').append(trolleyDiv);
     let trolleys = [

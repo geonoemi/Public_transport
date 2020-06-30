@@ -1,26 +1,68 @@
 
-body{
-    color:white;
-    background-color: rgba(27, 5, 78, 0.986);
-}
-title{
-    text-align: center;
-    font-weight:bold;
-    color:black;
-    font-size:32px;
-}
-div{
-    margin: 10 px;
-    padding: 50px 10 px 50px 10px;
-    height: 40px;
-    width:180px;
-    display: block;
-    
-    text-align: center;
-   
-}
-.labels{
-    display: inline-block;
-    color:white;
+html,body, body *{
+    margin: 0 auto;
+    padding:10 px;
+    background-color:#09093B;
+    color:#A5A5A6;
+    display:block;
+   /* font-size:0.8 rem; */
 }
 
+.vehicleDiv, .optionDiv{
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    padding:10 px;
+
+}
+
+.labels{
+    display:block;
+    margin:0 auto;
+    padding:10 px;
+    text-align:center;
+}
+
+
+h1{
+    font-size:1.8rem;
+}
+h2{
+    font-size:1.6rem;
+}
+h3{
+    font-size:1.4rem;
+}
+
+/*phone only*/
+@media (max-width: 599px) {
+    body,html{
+        font-size:25px;
+    }
+}
+/*for-tablet-portrait-up*/
+@media (min-width: 600px) {
+    body,html{
+        font-size:50px;
+    }
+}
+
+/*for-tablet-landscape-up */
+@media (min-width: 900px) {
+    body,html{
+        font-size:50px;
+    }
+}
+/*for-desktop-up*/
+@media (min-width: 1200px) {
+    body,html{
+        font-size:50px;
+    }
+}
+
+/*for-big-desktop-up*/
+@media (min-width: 1800px) {
+    body{
+        font-size:50px;
+    }
+}
