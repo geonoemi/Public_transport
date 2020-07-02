@@ -10,11 +10,12 @@ $(document).ready(function(){
         chosenVehicle=$('#vehicles :selected').text();
         console.log('your chosen vehicle is: '+chosenVehicle);
     });
-    $('#vehicles').on('change',function(){     
+    $('#vehicles').on('change',function(){   
+        $('#publicTransportIMG').remove();  
         if(chosenVehicle=='Tram'){
             tramFunction();
             selectTramFunction();
-         }
+        }
         
         if(chosenVehicle=='Bus'){
            busFunction();

@@ -1,7 +1,7 @@
 let chosenTrolley="";
 let trolleyFunction=function(){
-    let trolleyDiv=$('<div>').attr('id', 'busDiv');
-    let label= $('<label>').attr('class','labels').text('Choose trolley:'); 
+    let trolleyDiv=$('<div>').attr('id', 'trolleyDiv');
+    let label= $('<label>').attr('class','labels').text('Choose trolley'); 
     $(trolleyDiv).append(label);  
     $('.optionDiv').append(trolleyDiv);
     let trolleys = [
@@ -9,10 +9,12 @@ let trolleyFunction=function(){
                     {val : 2, text: '10'},
                     {val : 3, text: '19'}
                     ];
-   let selectTrolley = $('<select>').attr('id','selectTrolley').appendTo('.optionDiv');
+   let selectTrolley = $('<select>').attr('id','selectTrolley').appendTo('#trolleyDiv');
     $(trolleys).each(function() {
         selectTrolley.append($('<option>').attr('value',this.val).text(this.text));
     });
+    let img=$('<img>').attr('src', 'trolley.jpg').attr('id', 'trolleyIMG');
+    $('.optionDiv').append(img);   
 };
 let selectTrolleyFunction=function(){
     $('#selectTrolley').on('change',function(){  
