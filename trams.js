@@ -15,8 +15,8 @@ let tramFunction=function(){
     $(trams).each(function() {
     selectTram.append($('<option>').attr('value',this.val).text(this.text));
 });
-let img=$('<img>').attr('src', 'tram.jpg').attr('id', 'tramIMG');
-$('.optionDiv').append(img);   
+/*let img=$('<img>').attr('src', 'tram.jpg').attr('id', 'tramIMG');
+$('.optionDiv').append(img);   */
 };
 /*$('#selectTram').on('change',function(){ 
     let isEmpty=$(this);

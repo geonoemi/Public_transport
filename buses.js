@@ -13,7 +13,7 @@ let chosenBus="";
         $(buses).each(function() {
             selectBus.append($('<option>').attr('value',this.val).text(this.text));
         });
-        let img=$('<img>').attr('src', 'bus.jpg').attr('id', 'busIMG');
+        /*let img=$('<img>').attr('src', 'bus.jpg').attr('id', 'busIMG');*/
         $('.optionDiv').append(img);   
     };
     let selectBusFunction=function(){

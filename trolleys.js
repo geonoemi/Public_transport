@@ -13,8 +13,8 @@ let trolleyFunction=function(){
     $(trolleys).each(function() {
         selectTrolley.append($('<option>').attr('value',this.val).text(this.text));
     });
-    let img=$('<img>').attr('src', 'trolley.jpg').attr('id', 'trolleyIMG');
-    $('.optionDiv').append(img);   
+    /*let img=$('<img>').attr('src', 'trolley.jpg').attr('id', 'trolleyIMG');
+    $('.optionDiv').append(img);   */
 };
 let selectTrolleyFunction=function(){
     $('#selectTrolley').on('change',function(){  
