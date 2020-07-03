@@ -17,6 +17,12 @@ let trolleyFunction=function(){
     $('.optionDiv').append(img);   */
 };
 let selectTrolleyFunction=function(){
+    $('#selectTrolley').on('change',function(){ 
+         let isEmpty=  $('#selectTrolley').next();
+         if(isEmpty.children().length>0){
+             isEmpty.children().remove();     
+         }
+    });
     $('#selectTrolley').on('change',function(){  
         chosenTrolley=$('#selectTrolley :selected').text();
         if(chosenTrolley=='8'){

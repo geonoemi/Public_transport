@@ -14,23 +14,23 @@ let tramFunction=function(){
     let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');
     $('.optionDiv').append(tramsDiv);
     $(trams).each(function() {
-    selectTram.append($('<option>').attr('value',this.val).text(this.text));
-});
+     selectTram.append($('<option>').attr('value',this.val).text(this.text));
+    });
 /*let img=$('<img>').attr('src', 'tram.jpg').attr('id', 'tramIMG');
 $('.optionDiv').append(img);   */
 };
 
-$('#selectTram').on('change',function(){ 
-   /* $(this).parent().find('#tramsDiv')*/
-    let isEmpty= $(this).after();
-         if(isEmpty.children().length>0){
-            isEmpty.children().remove();   
-            chosenTram=$('#selectTram :selected').text();
-            console.log('your chosen tram is: '+chosenTram);
-        }
-});
+
 
 let selectTramFunction=function(){
+
+    $('#selectTram').on('change',function(){ 
+        let isEmpty=  $('#selectTram').next();
+        if(isEmpty.children().length>0){
+            isEmpty.children().remove();     
+        }
+    });   
+
     $(selectTram).on('change',function(){  
         chosenTram=$('#selectTram :selected').text();
         if(chosenTram=='2'){
