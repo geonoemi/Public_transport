@@ -1,4 +1,3 @@
-
 let chosenTram="";
 
 let tramFunction=function(){
@@ -16,11 +15,7 @@ let tramFunction=function(){
     $(trams).each(function() {
      selectTram.append($('<option>').attr('value',this.val).text(this.text));
     });
-/*let img=$('<img>').attr('src', 'tram.jpg').attr('id', 'tramIMG');
-$('.optionDiv').append(img);   */
 };
-
-
 
 let selectTramFunction=function(){
 
@@ -64,12 +59,6 @@ let select2Station=function(){
     $(stations2Div).append(label);  
     $(tramsDiv).append(stations2Div);  
 
-    $('#stations2Div').on('change',function(){  
-        let isEmpty=$(this);
-        if(isEmpty.children().length>0){
-            isEmpty.children().remove();
-        }
-    });
     let selectStation2 = $('<select>').attr('id','selectStation2').appendTo('#stations2Div');
   
     $(stations2).each(function() {
