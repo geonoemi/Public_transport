@@ -4,28 +4,31 @@ let chosenTram="";
 let tramFunction=function(){
     let tramsDiv=$('<div>').attr('id', 'tramsDiv');
     let label= $('<label>').attr('class','labels').text('Choose tram');  
-    $(tramsDiv).append(label); 
-    $('.optionDiv').append(tramsDiv);
+    $('.optionDiv').append(label); 
+    
     let trams = [
                 {val : 1, text: '2'},
                 {val : 2, text: '3F'},
                 {val : 3, text: '4'}
                 ];    
-    let selectTram = $('<select>').attr('id','selectTram').appendTo('#tramsDiv');
+    let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');
+    $('.optionDiv').append(tramsDiv);
     $(trams).each(function() {
     selectTram.append($('<option>').attr('value',this.val).text(this.text));
 });
 /*let img=$('<img>').attr('src', 'tram.jpg').attr('id', 'tramIMG');
 $('.optionDiv').append(img);   */
 };
-/*$('#selectTram').on('change',function(){ 
-    let isEmpty=$(this);
+
+$('#selectTram').on('change',function(){ 
+   /* $(this).parent().find('#tramsDiv')*/
+    let isEmpty= $(this).after();
          if(isEmpty.children().length>0){
-            isEmpty.children().remove();
+            isEmpty.children().remove();   
             chosenTram=$('#selectTram :selected').text();
             console.log('your chosen tram is: '+chosenTram);
         }
-});*/
+});
 
 let selectTramFunction=function(){
     $(selectTram).on('change',function(){  
