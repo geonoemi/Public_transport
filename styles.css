@@ -41,7 +41,7 @@ body{
     width: 30%;
 }
 #tramIMG{
-    margin: 0 auto;
+    margin-left: 80px;
     float:left;
     width:30%;
 }
