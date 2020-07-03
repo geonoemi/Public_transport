@@ -51,7 +51,7 @@ let select70Station=function(){
     let stations70 = [
         {val : 1, text: 'Füvészkert'},
         {val : 2, text: 'Mars-tér'},
-        {val : 3, text: 'Széchenyi-tér'}
+        {val : 3, text: 'Széchenyi-tér'} 
     ];
     let stations70Div=$('<div>').attr('id', 'stations70Div');
   

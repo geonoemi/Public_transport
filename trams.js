@@ -5,12 +5,19 @@ let tramFunction=function(){
     let label= $('<label>').attr('class','labels').text('Choose tram');  
     $('.optionDiv').append(label); 
     
-    let trams = [
-                {val : 1, text: '2'},
-                {val : 2, text: '3F'},
-                {val : 3, text: '4'}
-                ];    
-    let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');
+    let buttonDiv = $('<div>').attr('id','buttonDiv');
+    
+    $(tramsDiv).append(buttonDiv);
+    let button2=$('<button>').attr('class','button').text('2');
+    let button3F=$('<button>').attr('class','button').text('3F');
+    let button4=$('<button>').attr('class','button').text('4');
+
+    $(buttonDiv).append(button2);
+    $(buttonDiv).append(button3F);
+    $(buttonDiv).append(button4);
+
+
+  /*  let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');*/
     $('.optionDiv').append(tramsDiv);
     $(trams).each(function() {
      selectTram.append($('<option>').attr('value',this.val).text(this.text));
