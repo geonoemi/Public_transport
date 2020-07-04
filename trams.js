@@ -8,7 +8,8 @@ let tramFunction=function(){
     let buttonDiv = $('<div>').attr('id','buttonDiv');
     
     $(tramsDiv).append(buttonDiv);
-    let button2=$('<button>').attr('class','button').text('2');
+    let button2=$('<button>').attr('class','button').attr('value','2').text('2');
+    console.log(button2.text());
     let button3F=$('<button>').attr('class','button').text('3F');
     let button4=$('<button>').attr('class','button').text('4');
 
@@ -19,14 +20,20 @@ let tramFunction=function(){
 
   /*  let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');*/
     $('.optionDiv').append(tramsDiv);
-    $(trams).each(function() {
+  /*  $(trams).each(function() {
      selectTram.append($('<option>').attr('value',this.val).text(this.text));
+    });*/
+
+    
+    $('.button').on('click',function(){
+        console.log(this).text();
     });
 };
 
 let selectTramFunction=function(){
 
-    $('#selectTram').on('change',function(){ 
+};
+   /* $('#selectTram').on('change',function(){ 
         let isEmpty=  $('#selectTram').next();
         if(isEmpty.children().length>0){
             isEmpty.children().remove();     
@@ -52,7 +59,7 @@ let selectTramFunction=function(){
             select4Station();
         }
     });    
-};
+};*/
 
 let select2Station=function(){
     let stations2 = [
