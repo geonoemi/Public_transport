@@ -68,6 +68,7 @@ let select70Station=function(){
 };
 
 let select71AStation=function(){
+   
     let stations71A = [
         {val : 1, text: 'Mars-tér'},
         {val : 2, text: 'Katalin utca'},
@@ -84,9 +85,23 @@ let select71AStation=function(){
     $(stations71A).each(function() {
         selectStation71A.append($('<option>').attr('value',this.val).text(this.text));
     });
-   /*selected station */
+
     $('#selectStation71A').on('change', function(){
+     /*   $(selectStation71A).on('change',function(){ 
+            let empty=$('#selectStation71A :selected').text();
+            console.log(empty);
+            if(stations71ADiv.next().length>0){
+                stations71ADiv.next().remove();     
+           }
+      });  */
+      let empty=$('#selectStation71A :selected').text();
+            console.log(empty);
+            if(stations71ADiv.next().length>0){
+                stations71ADiv.next().remove();     
+           }
+      
         selectedStation71A=$('#selectStation71A :selected').text();
+        
         if((selectedStation71A)==='Katalin utca'){
             console.log(selectedStation71A);
                 let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
