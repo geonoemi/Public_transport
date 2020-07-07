@@ -26,7 +26,8 @@ let tramFunction=function(){
 
     
     $('.button').on('click',function(){
-        console.log(this).text();
+        console.log('2-es gomb felirata:'+(this).text());
+
     });
 };
 
@@ -47,6 +48,7 @@ let selectTramFunction=function(){
             select2Station();
         }
     });
+    
     $(selectTram).on('change',function(){  
         if(chosenTram=='3F'){
             console.log('your chosen tram is: '+chosenTram);  

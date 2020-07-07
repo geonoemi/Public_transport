@@ -83,6 +83,11 @@ let select71AStation=function(){
     $(stations71A).each(function() {
         selectStation71A.append($('<option>').attr('value',this.val).text(this.text));
     });
+   
+        $('#selectStation71A').on('change', function(){
+             selectedStation71A=$('#selectStation71A :selected').text();
+             console.log(selectedStation71A);
+    });
 };
 
 let select90HStation=function(){
@@ -102,5 +107,7 @@ let select90HStation=function(){
     $(stations90H).each(function() {
         selectStation90H.append($('<option>').attr('value',this.val).text(this.text));
     });
+
 };
+
 
