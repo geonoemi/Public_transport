@@ -168,6 +168,35 @@ let select90HStation=function(){
         selectStation90H.append($('<option>').attr('value',this.val).text(this.text));
     });
 
+    $('#selectStation90H').on('change', function(){
+    
+        let empty=$('#selectStation90H :selected').text();
+            console.log(empty);
+            if(stations90HDiv.next().length>0){
+            stations90HDiv.next().remove();     
+            }
+      
+        selectedStation90H=$('#selectStation90H :selected').text();
+    
+        if(((selectedStation90H)==='Szegedi Ipari Logisztikai Központ')||((selectedStation90H)==='Rókusi víztorony') || ((selectedStation90H)==='Lugas utca')) {
+            console.log(selectedStation90H);
+                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+                $('#busDiv').append(selectWayDiv);
+                $(selectWayDiv).append(selectWayLabel);
+                selectWay90H();
+        }
+    });
 };
 
+let selectWay90H=function(){
+    let way=[
+        {val : 1, text: 'Szegedi Ipari Logisztikai Központ'},
+        {val : 2, text : 'Lugas utca'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+}
 
