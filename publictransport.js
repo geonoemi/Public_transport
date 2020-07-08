@@ -1,6 +1,6 @@
 $(document).ready(function(){ 
+
     let chosenVehicle="";
-    let stations="";
 
     $('#vehicles').on('change',function(){ 
         let isEmpty=$('.optionDiv');
@@ -28,30 +28,6 @@ $(document).ready(function(){
         trolleyFunction();
         selectTrolleyFunction();    ;
     });
-
-
-  /*  $('#vehicles').on('change',function(){   
-        $('#publicTransportIMG').remove();  
-        if(chosenVehicle=='Tram'){
-            tramFunction();
-            selectTramFunction();
-        }
-        
-        if(chosenVehicle=='Bus'){
-           busFunction();
-           selectBusFunction();
-        }
-        
-        if(chosenVehicle=='Trolley'){
-           trolleyFunction();
-           selectTrolleyFunction();          
-        }
-    });*/
-
-    $('chosenTram').on('change',function(){  
-      
-    });
-
 });
 
    
