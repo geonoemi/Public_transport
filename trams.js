@@ -17,19 +17,18 @@ let tramFunction=function(){
     $(buttonDiv).append(button3F);
     $(buttonDiv).append(button4);
 
-
-  /*  let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');*/
     $('.optionDiv').append(tramsDiv);
-  /*  $(trams).each(function() {
+   
+    $(button2).on('click',function(){
+        console.log('2-es gomb felirata:'+(this).val());
+    });
+};
+
+    /*let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');*/
+    /*  $(trams).each(function() {
      selectTram.append($('<option>').attr('value',this.val).text(this.text));
     });*/
 
-    
-    $('.button').on('click',function(){
-        console.log('2-es gomb felirata:'+(this).text());
-
-    });
-};
 
 let selectTramFunction=function(){
 
@@ -39,29 +38,7 @@ let selectTramFunction=function(){
         if(isEmpty.children().length>0){
             isEmpty.children().remove();     
         }
-    });   
-
-    $(selectTram).on('change',function(){  
-        chosenTram=$('#selectTram :selected').text();
-        if(chosenTram=='2'){
-            console.log('your chosen tram is: '+chosenTram);
-            select2Station();
-        }
-    });
-    
-    $(selectTram).on('change',function(){  
-        if(chosenTram=='3F'){
-            console.log('your chosen tram is: '+chosenTram);  
-            select3FStation();  
-        }
-    });    
-    $(selectTram).on('change',function(){  
-        if(chosenTram=='4'){
-            console.log('your chosen tram is: '+chosenTram);    
-            select4Station();
-        }
-    });    
-};*/
+    });   */
 
 let select2Station=function(){
     let stations2 = [
@@ -98,6 +75,7 @@ let select3FStation=function(){
     $(stations3F).each(function() {
         selectStation3F.append($('<option>').attr('value',this.val).text(this.text));
     });
+    departureTimes2SzemelyiPuWorkingDays();
 };
 
 let select4Station=function(){

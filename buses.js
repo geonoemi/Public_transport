@@ -1,7 +1,7 @@
 let chosenBus="";
-let way=['forth', 'back'];
 
 let busFunction=function(){
+
     let busDiv=$('<div>').attr('id', 'busDiv');
     let label= $('<label>').attr('class','labels').text('Choose bus');  
     $('.optionDiv').append(label); 
@@ -10,9 +10,11 @@ let busFunction=function(){
                 {val : 1, text: '70'},
                 {val : 2, text: '71A'},
                 {val : 3, text: '90H'}
-                ];    
+    ];    
+
     let selectBus = $('<select>').attr('id','selectBus').appendTo('.optionDiv');
     $('.optionDiv').append(busDiv);
+
     $(bus).each(function() {
      selectBus.append($('<option>').attr('value',this.val).text(this.text));
     });
@@ -20,35 +22,39 @@ let busFunction=function(){
 
 let selectBusFunction=function(){
 
-    $('#selectBus').on('change',function(){ 
-        let isEmpty=  $('#selectBus').next();
+    $(selectBus).on('change',function(){ 
+
+        let isEmpty=  $(selectBus).next();
+
         if(isEmpty.children().length>0){
             isEmpty.children().remove();     
         }
     });   
 
     $(selectBus).on('change',function(){  
+
         chosenBus=$('#selectBus :selected').text();
+
         if(chosenBus=='70'){
-            console.log('your chosen bus is: '+chosenBus);
             select70Station();
         }
     });
     $(selectBus).on('change',function(){  
+
         if(chosenBus=='71A'){
-            console.log('your chosen bus is: '+chosenBus);  
             select71AStation();  
         }
     });    
     $(selectBus).on('change',function(){  
+
         if(chosenBus=='90H'){
-            console.log('your chosen bus is: '+chosenBus);    
             select90HStation();
         }
     });    
 };
 
 let select70Station=function(){
+
     let stations70 = [
         {val : 1, text: 'Füvészkert'},
         {val : 2, text: 'Mars-tér'},
@@ -66,33 +72,33 @@ let select70Station=function(){
         selectStation70.append($('<option>').attr('value',this.val).text(this.text));
     });
 
-    $('#selectStation70').on('change', function(){
+    $(selectStation70).on('change', function(){
     
-        let empty=$('#selectStation70 :selected').text();
-            console.log(empty);
-            if(stations70Div.next().length>0){
+        if(stations70Div.next().length>0){
             stations70Div.next().remove();     
-            }
+        }
       
         selectedStation70=$('#selectStation70 :selected').text();
     
         if(((selectedStation70)==='Füvészkert')||((selectedStation70)==='Mars-tér') || ((selectedStation70)==='Széchenyi-tér')) {
-            console.log(selectedStation70);
-                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $('#busDiv').append(selectWayDiv);
-                $(selectWayDiv).append(selectWayLabel);
-                selectWay70();
+
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay70();
         }
     });
 };
 
 let selectWay70=function(){
+
     let way=[
         {val : 1, text: 'Mars-tér'},
         {val : 2, text : 'Füvészkert'}
     ];
     let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+
     $(way).each(function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
@@ -118,39 +124,51 @@ let select71AStation=function(){
         selectStation71A.append($('<option>').attr('value',this.val).text(this.text));
     });
 
-    $('#selectStation71A').on('change', function(){
+    $(selectStation71A).on('change', function(){
     
-        let empty=$('#selectStation71A :selected').text();
-            console.log(empty);
-            if(stations71ADiv.next().length>0){
-            stations71ADiv.next().remove();     
-            }
+        if(stations71ADiv.next().length>0){
+        stations71ADiv.next().remove();     
+        }
       
         selectedStation71A=$('#selectStation71A :selected').text();
     
         if(((selectedStation71A)==='Katalin utca')||((selectedStation71A)==='Mars-tér') || ((selectedStation71A)==='Napfényfürdő')) {
-            console.log(selectedStation71A);
-                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $('#busDiv').append(selectWayDiv);
-                $(selectWayDiv).append(selectWayLabel);
-                selectWay71A();
+
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay71A();/*rossz helyen van*/
         }
     });
 };
 
 let selectWay71A=function(){
+
     let way=[
         {val : 1, text: 'Mars-tér'},
         {val : 2, text : 'Napfényfürdő'}
     ];
     let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+
     $(way).each(function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
-}
+
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Mars-tér'){
+            departureTimes71AMarsTerWorkingDays();
+        }else{
+            departureTimes71ANapfenyfurdoWorkingDays();
+        }
+    });
+
+};
+
 
 let select90HStation=function(){
+
     let stations90H = [
         {val : 1, text: 'Szegedi Ipari Logisztikai Központ'},
         {val : 2, text: 'Rókusi víztorony'},
@@ -168,23 +186,20 @@ let select90HStation=function(){
         selectStation90H.append($('<option>').attr('value',this.val).text(this.text));
     });
 
-    $('#selectStation90H').on('change', function(){
-    
-        let empty=$('#selectStation90H :selected').text();
-            console.log(empty);
-            if(stations90HDiv.next().length>0){
-            stations90HDiv.next().remove();     
-            }
+    $(selectStation90H).on('change', function(){
+
+        if(stations90HDiv.next().length>0){
+        stations90HDiv.next().remove();     
+        }
       
         selectedStation90H=$('#selectStation90H :selected').text();
     
         if(((selectedStation90H)==='Szegedi Ipari Logisztikai Központ')||((selectedStation90H)==='Rókusi víztorony') || ((selectedStation90H)==='Lugas utca')) {
-            console.log(selectedStation90H);
-                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $('#busDiv').append(selectWayDiv);
-                $(selectWayDiv).append(selectWayLabel);
-                selectWay90H();
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay90H();
         }
     });
 };
