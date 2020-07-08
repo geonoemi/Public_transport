@@ -95,19 +95,15 @@ let select71AStation=function(){
            }
       
         selectedStation71A=$('#selectStation71A :selected').text();
-        
-        if((selectedStation71A)==='Katalin utca'){
+    
+        if(((selectedStation71A)==='Katalin utca')||((selectedStation71A)==='Mars-tér') || ((selectedStation71A)==='Napfényfürdő')) {
             console.log(selectedStation71A);
                 let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
                 let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
                 $('#busDiv').append(selectWayDiv);
                 $(selectWayDiv).append(selectWayLabel);
-                let way=[
-                    {val : 1, text: 'Mars-tér'},
-                    {val : 2, text: 'Napfényfürdő'}
-                ];
                 selectWay71A();
-             }
+        }
     });
 };
 let selectWay71A=function(){
