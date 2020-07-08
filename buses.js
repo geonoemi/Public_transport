@@ -65,7 +65,39 @@ let select70Station=function(){
     $(stations70).each(function() {
         selectStation70.append($('<option>').attr('value',this.val).text(this.text));
     });
+
+    $('#selectStation70').on('change', function(){
+    
+        let empty=$('#selectStation70 :selected').text();
+            console.log(empty);
+            if(stations70Div.next().length>0){
+            stations70Div.next().remove();     
+            }
+      
+        selectedStation70=$('#selectStation70 :selected').text();
+    
+        if(((selectedStation70)==='Füvészkert')||((selectedStation70)==='Mars-tér') || ((selectedStation70)==='Széchenyi-tér')) {
+            console.log(selectedStation70);
+                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+                $('#busDiv').append(selectWayDiv);
+                $(selectWayDiv).append(selectWayLabel);
+                selectWay70();
+        }
+    });
 };
+
+let selectWay70=function(){
+    let way=[
+        {val : 1, text: 'Mars-tér'},
+        {val : 2, text : 'Füvészkert'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+}
+
 
 let select71AStation=function(){
    
@@ -88,11 +120,11 @@ let select71AStation=function(){
 
     $('#selectStation71A').on('change', function(){
     
-      let empty=$('#selectStation71A :selected').text();
+        let empty=$('#selectStation71A :selected').text();
             console.log(empty);
             if(stations71ADiv.next().length>0){
-                stations71ADiv.next().remove();     
-           }
+            stations71ADiv.next().remove();     
+            }
       
         selectedStation71A=$('#selectStation71A :selected').text();
     
@@ -106,6 +138,7 @@ let select71AStation=function(){
         }
     });
 };
+
 let selectWay71A=function(){
     let way=[
         {val : 1, text: 'Mars-tér'},
@@ -116,6 +149,7 @@ let selectWay71A=function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
 }
+
 let select90HStation=function(){
     let stations90H = [
         {val : 1, text: 'Szegedi Ipari Logisztikai Központ'},
