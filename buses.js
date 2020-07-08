@@ -141,6 +141,24 @@ let select71AStation=function(){
             selectWay71A();
             getDepartureTimesFor71AKatalinUtcaWorkingDays();
         }
+        if((selectedStation71A)==='Mars-tér'){
+
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay71A();
+            getDepartureTimesFor71AMarsTerWorkingDays();
+        }
+        if((selectedStation71A)==='Napfényfürdő'){
+
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay71A();
+            getDepartureTimesFor71ANapfenyfurdoWorkingDays();
+        }
     });
 };
 
@@ -163,12 +181,31 @@ let getDepartureTimesFor71AKatalinUtcaWorkingDays=function(){
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Mars-tér'){
-            departureTimes71AMarsTerWorkingDays();
+            departureTimes71AKatalinUtcaToMarsTerWorkingDays();/*Mars tér felé*/
         }else{
-            departureTimes71ANapfenyfurdoWorkingDays();
+            departureTimes71AKatalinUtcaToNapfenyfurdoWorkingDays();/*Napfényfürdő felé*/
         }
     });
+}
 
+let getDepartureTimesFor71AMarsTerWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Napfényfürdő'){
+            departureTimes71AMarsTerToNapfenyfurdoWorkingDays();
+        }
+    });
+}
+
+let getDepartureTimesFor71ANapfenyfurdoWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Mars-tér'){
+            departureTimes71ANapfenyfurdoToMarsTerWorkingDays();
+        }
+    });
 }
 
 let select90HStation=function(){
