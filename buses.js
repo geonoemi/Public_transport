@@ -233,7 +233,7 @@ let getDepartureTimesFor71AKatalinUtcaWorkingDays=function(){
             departureTimes71AKatalinUtcaToNapfenyfurdoWorkingDays();/*Napfényfürdő felé*/
         }
     });
-}
+};
 
 let getDepartureTimesFor71AMarsTerWorkingDays=function(){
     
@@ -243,7 +243,7 @@ let getDepartureTimesFor71AMarsTerWorkingDays=function(){
             departureTimes71AMarsTerToNapfenyfurdoWorkingDays();
         }
     });
-}
+};
 
 let getDepartureTimesFor71ANapfenyfurdoWorkingDays=function(){
     
@@ -253,7 +253,7 @@ let getDepartureTimesFor71ANapfenyfurdoWorkingDays=function(){
             departureTimes71ANapfenyfurdoToMarsTerWorkingDays();
         }
     });
-}
+};
 
 let select90HStation=function(){
 
@@ -282,12 +282,29 @@ let select90HStation=function(){
       
         selectedStation90H=$('#selectStation90H :selected').text();
     
-        if(((selectedStation90H)==='Szegedi Ipari Logisztikai Központ')||((selectedStation90H)==='Rókusi víztorony') || ((selectedStation90H)==='Lugas utca')) {
+        if((selectedStation90H)==='Szegedi Ipari Logisztikai Központ')/*||((selectedStation90H)==='Rókusi víztorony') || ((selectedStation90H)==='Lugas utca'))*/ {
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
             selectWay90H();
+            getDepartureTimesFor90HSzegedIpariLogKpWorkingDays();
+        }
+        if((selectedStation90H)==='Rókusi víztorony') {
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay90H();
+            getDepartureTimesFor90HRokusiViztoronyWorkingDays();
+        }
+        if((selectedStation90H)==='Lugas utca') {
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay90H();
+            getDepartureTimesFor90HLugasUtcaWorkingDays();
         }
     });
 };
@@ -301,5 +318,34 @@ let selectWay90H=function(){
     $(way).each(function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
-}
+};
 
+let getDepartureTimesFor90HSzegedIpariLogKpWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Lugas utca'){
+            departureTimes90HSzegedIparuLogKpToLugasUtcaWorkingDays();
+        }
+    });
+};
+let getDepartureTimesFor90HLugasUtcaWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Szegedi Ipari Logisztikai Központ'){
+            departureTimes90HLugasUtcaToSzegedIparuLogKpWorkingDays();
+        }
+    });
+};
+let getDepartureTimesFor90HRokusiViztoronyWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Szegedi Ipari Logisztikai Központ'){
+            departureTimes90HRokusiViztoronyToSzegedIpariLogKpWorkingDays();
+        }else{
+            departureTimes90HRokusiViztoronyToLugasUtcaWorkingDays();
+        }
+    });
+};
