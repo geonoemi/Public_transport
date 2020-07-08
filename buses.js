@@ -132,13 +132,14 @@ let select71AStation=function(){
       
         selectedStation71A=$('#selectStation71A :selected').text();
     
-        if(((selectedStation71A)==='Katalin utca')||((selectedStation71A)==='Mars-tér') || ((selectedStation71A)==='Napfényfürdő')) {
+        if(((selectedStation71A)==='Katalin utca'))/*||((selectedStation71A)==='Mars-tér') || ((selectedStation71A)==='Napfényfürdő'))*/ {
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
-            selectWay71A();/*rossz helyen van*/
+            selectWay71A();
+            getDepartureTimesFor71AKatalinUtcaWorkingDays();
         }
     });
 };
@@ -155,6 +156,10 @@ let selectWay71A=function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
 
+};
+
+let getDepartureTimesFor71AKatalinUtcaWorkingDays=function(){
+    
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Mars-tér'){
@@ -164,8 +169,7 @@ let selectWay71A=function(){
         }
     });
 
-};
-
+}
 
 let select90HStation=function(){
 
