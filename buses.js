@@ -87,13 +87,7 @@ let select71AStation=function(){
     });
 
     $('#selectStation71A').on('change', function(){
-     /*   $(selectStation71A).on('change',function(){ 
-            let empty=$('#selectStation71A :selected').text();
-            console.log(empty);
-            if(stations71ADiv.next().length>0){
-                stations71ADiv.next().remove();     
-           }
-      });  */
+    
       let empty=$('#selectStation71A :selected').text();
             console.log(empty);
             if(stations71ADiv.next().length>0){
@@ -112,22 +106,18 @@ let select71AStation=function(){
                     {val : 1, text: 'Mars-tér'},
                     {val : 2, text: 'Napfényfürdő'}
                 ];
-                let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
-                $(way).each(function(){
-                    $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
-                });
-               /* selectWay();*/
-                /*choose way: */
+                selectWay71A();
              }
     });
 };
-let selectWay=function(){
+let selectWay71A=function(){
     let way=[
         {val : 1, text: 'Mars-tér'},
         {val : 2, text : 'Napfényfürdő'}
     ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
     $(way).each(function(){
-        $('#selectWayDiv').append('<option>').attr('value', this.val).text(this.text);
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
 }
 let select90HStation=function(){
