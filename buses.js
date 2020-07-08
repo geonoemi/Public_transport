@@ -80,13 +80,32 @@ let select70Station=function(){
       
         selectedStation70=$('#selectStation70 :selected').text();
     
-        if(((selectedStation70)==='Füvészkert')||((selectedStation70)==='Mars-tér') || ((selectedStation70)==='Széchenyi-tér')) {
+        if((selectedStation70)==='Füvészkert') {
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
             selectWay70();
+            getDepartureTimesFor70FuveszkertWorkingDays();
+        }
+        if((selectedStation70)==='Mars-tér') {
+
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay70();
+            getDepartureTimesFor70MarsTerWorkingDays();
+        }
+        if((selectedStation70)==='Széchenyi-tér') {
+
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(busDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            selectWay70();
+            getDepartureTimesFor70SzechenyiTerTerWorkingDays();
         }
     });
 };
@@ -102,8 +121,36 @@ let selectWay70=function(){
     $(way).each(function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
-}
-
+};
+let getDepartureTimesFor70FuveszkertWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Mars-tér'){
+            departureTimes70FuveszkertToMarsTerWorkingDays();/*Mars tér felé*/
+        }
+    });
+};
+let getDepartureTimesFor70MarsTerWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Füvészkert'){
+            departureTimes70MarsTerToFuveszkertWorkingDays();/*Mars tér felé*/
+        }
+    });
+};
+let getDepartureTimesFor70SzechenyiTerTerWorkingDays=function(){
+    
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Füvészkert'){
+            departureTimes7SzechenyiTerToFuveszkertWorkingDays();/*Mars tér felé*/
+        }else{
+            departureTimes7SzechenyiTerToMarsTerWorkingDays();
+        }
+    });
+};
 
 let select71AStation=function(){
    
