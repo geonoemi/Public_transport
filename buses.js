@@ -110,20 +110,6 @@ let select70Station=function(){
     });
 };
 
-let selectWay70=function(){
-
-    let way=[
-        {val : 1, text: 'Mars-tér'},
-        {val : 2, text : 'Füvészkert'}
-    ];
-    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
-
-    $(way).each(function(){
-        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
-    });
-};
-
-
 let select71AStation=function(){
    
     let stations71A = [
@@ -181,22 +167,6 @@ let select71AStation=function(){
     });
 };
 
-let selectWay71A=function(){
-
-    let way=[
-        {val : 1, text: 'Mars-tér'},
-        {val : 2, text : 'Napfényfürdő'}
-    ];
-    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
-
-    $(way).each(function(){
-        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
-    });
-
-};
-
-
-
 let select90HStation=function(){
 
     let stations90H = [
@@ -224,7 +194,7 @@ let select90HStation=function(){
       
         selectedStation90H=$('#selectStation90H :selected').text();
     
-        if((selectedStation90H)==='Szegedi Ipari Logisztikai Központ')/*||((selectedStation90H)==='Rókusi víztorony') || ((selectedStation90H)==='Lugas utca'))*/ {
+        if((selectedStation90H)==='Szegedi Ipari Logisztikai Központ') {
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
@@ -251,15 +221,5 @@ let select90HStation=function(){
     });
 };
 
-let selectWay90H=function(){
-    let way=[
-        {val : 1, text: 'Szegedi Ipari Logisztikai Központ'},
-        {val : 2, text : 'Lugas utca'}
-    ];
-    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
-    $(way).each(function(){
-        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
-    });
-};
 
 
