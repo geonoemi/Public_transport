@@ -63,7 +63,38 @@ let select8Station=function(){
     $(stations8).each(function() {
         selectStation8.append($('<option>').attr('value',this.val).text(this.text));
     });
+
+    $('#selectStation8').on('change', function(){
+    
+        let empty=$('#selectStation8 :selected').text();
+            console.log(empty);
+            if(stations8Div.next().length>0){
+            stations8Div.next().remove();     
+            }
+      
+        selectedStation8=$('#selectStation8 :selected').text();
+    
+        if(((selectedStation8)==='Klinikák')||((selectedStation8)==='Makkosház')) {
+            console.log(selectedStation8);
+                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+                $('#trolleyDiv').append(selectWayDiv);
+                $(selectWayDiv).append(selectWayLabel);
+                selectWay8();
+        }
+    });
 };
+
+let selectWay8=function(){
+    let way=[
+        {val : 1, text: 'Makkosház'},
+        {val : 2, text : 'Klinikák'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+}
 
 let select10Station=function(){
     let stations10 = [
@@ -81,7 +112,38 @@ let select10Station=function(){
     $(stations10).each(function() {
         selectStation10.append($('<option>').attr('value',this.val).text(this.text));
     });
+
+    $('#selectStation10').on('change', function(){
+    
+        let empty=$('#selectStation10 :selected').text();
+            console.log(empty);
+            if(stations10Div.next().length>0){
+            stations10Div.next().remove();     
+            }
+      
+        selectedStation10=$('#selectStation10 :selected').text();
+    
+        if(((selectedStation10)==='Klinikák')||((selectedStation10)==='Víztorony-tér')) {
+            console.log(selectedStation10);
+                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+                $('#trolleyDiv').append(selectWayDiv);
+                $(selectWayDiv).append(selectWayLabel);
+                selectWay10();
+        }
+    });
 };
+
+let selectWay10=function(){
+    let way=[
+        {val : 1, text: 'Víztorony-tér'},
+        {val : 2, text : 'Klinikák'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+}
 
 let select19Station=function(){
     let stations19 = [
@@ -100,5 +162,37 @@ let select19Station=function(){
     $(stations19).each(function() {
         selectStation19.append($('<option>').attr('value',this.val).text(this.text));
     });
+
+    $('#selectStation19').on('change', function(){
+    
+        let empty=$('#selectStation19 :selected').text();
+            console.log(empty);
+            if(stations19Div.next().length>0){
+            stations19Div.next().remove();     
+            }
+      
+        selectedStation19=$('#selectStation19 :selected').text();
+    
+        if(((selectedStation19)==='Szegedi Ipari Logisztikai Központ') ||((selectedStation19)==='Rókusi víztorony')||((selectedStation19)==='Lugas utca')) {
+            console.log(selectedStation19);
+                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+                $('#trolleyDiv').append(selectWayDiv);
+                $(selectWayDiv).append(selectWayLabel);
+                selectWay19();
+        }
+    });
 };
+
+let selectWay19=function(){
+    let way=[
+        {val : 1, text: 'Szegedi Ipari Logisztikai Központ'},
+        {val : 2, text : 'Lugas utca'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+};
+
 
