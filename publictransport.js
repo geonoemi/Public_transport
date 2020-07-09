@@ -26,7 +26,7 @@ $(document).ready(function(){
     $('#trolleyIMG').on('click',function(){   
         $('#main').remove();
         trolleyFunction();
-        selectTrolleyFunction();    ;
+        selectTrolleyFunction(); 
     });
 });
 
