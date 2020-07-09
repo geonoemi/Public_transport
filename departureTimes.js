@@ -42,15 +42,16 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
 
 /*71A from Katalin utca*/
     let departureTimes71AKatalinUtcaToMarsTerWorkingDays=function(){
+
         let departureTimes="";
         let times=[];
         let n=0;
+
         for( let h=6; h<22; h++) {	
             for(let m=10;m<60;m+=10) {
                
                 departureTimes=h+":"+m;
                 times[n]=departureTimes;
-              /*  console.log(times[n]);*/
                 n++;
             }
         }	
@@ -60,19 +61,37 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
         let timesDiv=$('<div>').attr('id', 'timesDiv');
         $('body').children().remove();
         $('body').append(departureTimesDiv);
-        $(departureTimesDiv).append(departureTimesLabel);
         $(departureTimesDiv).append(timesDiv);
 
+        let selectHourLabel=$('<label>').attr('class','labels').text('Choose hour').appendTo(timesDiv);
         let selectHour = $('<select>').attr('id','selectHour').appendTo(timesDiv);
+
         for(let i=6;i<22;i++){
             selectHour.append($('<option>').text(i));
         }
         /*$(times).each(function() {
             console.log(this);           
         });*/
+
         $(selectHour).on('change',function(){ 
+            $(selectHour).after(departureTimesLabel);
             let chosenHour=$('#selectHour :selected').text();
-            console.log(chosenHour);
+            if((chosenHour)==='8'){
+              /*  console.log(chosenHour);*/
+              /*  $(times).each(function() {*/
+                /*  console.log(times); */
+                for(let i=0;i<times.length;i++){
+                    if((times[i]).startsWith("8")){
+                        console.log(times[i]);  
+                        let hour8=$('<p>').attr('class','hoursP').text(times[i]).appendTo(timesDiv);  
+                        hour8.slideDown();
+                   } 
+                }
+                 /*  if((times).startsWith("8")){
+                        console.log(times);    
+                   }    */
+              /*  });*/
+            }
         });        
 
     };
