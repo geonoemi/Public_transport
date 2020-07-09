@@ -48,7 +48,7 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
         for( let h=6; h<22; h++) {	
             for(let m=10;m<60;m+=10) {
                
-                departureTimes=" "+h+":"+m+"\n";
+                departureTimes=h+":"+m;
                 times[n]=departureTimes;
                /* console.log(departureTimes);
                 console.log("n= "+departureTimes);*/
@@ -59,14 +59,16 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
     	
         let departureTimesDiv=$('<div>').attr('id', 'departureTimesDiv');
         let departureTimesLabel=$('<label>').attr('class', 'labels').text("Departure times");
+        let timesDiv=$('<div>').attr('id', 'timesDiv');
         $('body').children().remove();
         $('body').append(departureTimesDiv);
         $(departureTimesDiv).append(departureTimesLabel);
+        $(departureTimesDiv).append(timesDiv);
 
         for(let i=0; i<times.length;i++) {
             console.log(times[i]);
-            departureTimesDiv.append(times[i]);
-           
+            let p=$('<p>').attr('id', 'timesP').text(times[i]+'\n');
+            timesDiv.append(p);           
         };
     };
     let departureTimes71AKatalinUtcaToNapfenyfurdoWorkingDays=function(){
