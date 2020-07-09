@@ -21,7 +21,7 @@ let departureTimes70MarsTerToFuveszkertWorkingDays=function(){
 };
 
 /*70 from Széhenyi-tér*/
-let departureTimes7SzechenyiTerToMarsTerWorkingDays=function(){
+let departureTimes70SzechenyiTerToMarsTerWorkingDays=function(){
         
     for( let h=6; h<22; h++) {	
         for(let m=20;m<60;m+=30) {
@@ -30,7 +30,7 @@ let departureTimes7SzechenyiTerToMarsTerWorkingDays=function(){
         }	
     }		
 };
-let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
+let departureTimes70SzechenyiTerToFuveszkertWorkingDays=function(){
         
     for( let h=6; h<22; h++) {	
         for(let m=22;m<60;m+=30) {
@@ -69,11 +69,10 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
         for(let i=6;i<22;i++){
             selectHour.append($('<option>').text(i));
         }
+        
         let pDiv=$('<div>').attr('id', 'pDiv');
         $(timesDiv).append(pDiv);
-        /*$(times).each(function() {
-            console.log(this);           
-        });*/
+    
         $(selectHour).on('change',function(){ 
     
             if(pDiv.children().length>0){
@@ -84,10 +83,7 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
             $(selectHour).after(departureTimesLabel);
             let chosenHour=$('#selectHour :selected').text();
             if((chosenHour)==='8'){
-               
-              /*  console.log(chosenHour);*/
-              /*  $(times).each(function() {*/
-                /*  console.log(times); */
+             
                 for(let i=0;i<times.length;i++){
                     if((times[i]).startsWith("8")){
                         console.log(times[i]);  
@@ -96,10 +92,6 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
                         hour8.slideDown();
                    } 
                 }
-                 /*  if((times).startsWith("8")){
-                        console.log(times);    
-                   }    */
-              /*  });*/
             }
         });        
 

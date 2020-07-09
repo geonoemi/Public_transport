@@ -23,9 +23,9 @@ let getDepartureTimesFor70SzechenyiTerTerWorkingDays=function(){
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Füvészkert'){
-            departureTimes7SzechenyiTerToFuveszkertWorkingDays();/*Mars tér felé*/
+            departureTimes70SzechenyiTerToFuveszkertWorkingDays();/*Mars tér felé*/
         }else{
-            departureTimes7SzechenyiTerToMarsTerWorkingDays();
+            departureTimes70SzechenyiTerToMarsTerWorkingDays();
         }
     });
 };
