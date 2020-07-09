@@ -50,9 +50,7 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
                
                 departureTimes=h+":"+m;
                 times[n]=departureTimes;
-               /* console.log(departureTimes);
-                console.log("n= "+departureTimes);*/
-                console.log(times[n]);
+              /*  console.log(times[n]);*/
                 n++;
             }
         }	
@@ -65,11 +63,18 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
         $(departureTimesDiv).append(departureTimesLabel);
         $(departureTimesDiv).append(timesDiv);
 
-        for(let i=0; i<times.length;i++) {
-            console.log(times[i]);
-            let p=$('<p>').attr('id', 'timesP').text(times[i]+'\n');
-            timesDiv.append(p);           
-        };
+        let selectHour = $('<select>').attr('id','selectHour').appendTo(timesDiv);
+        for(let i=6;i<22;i++){
+            selectHour.append($('<option>').text(i));
+        }
+        /*$(times).each(function() {
+            console.log(this);           
+        });*/
+        $(selectHour).on('change',function(){ 
+            let chosenHour=$('#selectHour :selected').text();
+            console.log(chosenHour);
+        });        
+
     };
     let departureTimes71AKatalinUtcaToNapfenyfurdoWorkingDays=function(){
         
