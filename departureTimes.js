@@ -69,14 +69,22 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
         for(let i=6;i<22;i++){
             selectHour.append($('<option>').text(i));
         }
+        let pDiv=$('<div>').attr('id', 'pDiv');
+        $(timesDiv).append(pDiv);
         /*$(times).each(function() {
             console.log(this);           
         });*/
-
+        $(selectHour).on('change',function(){ 
+    
+            if(pDiv.children().length>0){
+                pDiv.children().remove();     
+            }
+        });
         $(selectHour).on('change',function(){ 
             $(selectHour).after(departureTimesLabel);
             let chosenHour=$('#selectHour :selected').text();
             if((chosenHour)==='8'){
+               
               /*  console.log(chosenHour);*/
               /*  $(times).each(function() {*/
                 /*  console.log(times); */
@@ -84,6 +92,7 @@ let departureTimes7SzechenyiTerToFuveszkertWorkingDays=function(){
                     if((times[i]).startsWith("8")){
                         console.log(times[i]);  
                         let hour8=$('<p>').attr('class','hoursP').text(times[i]).appendTo(timesDiv);  
+                        pDiv.append(hour8);
                         hour8.slideDown();
                    } 
                 }
