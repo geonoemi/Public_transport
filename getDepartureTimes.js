@@ -1,3 +1,7 @@
+let departureTimes="";
+let times=[];
+let hours=[];    
+let n=0;
 let getDepartureTimesFor70FuveszkertWorkingDays=function(){
     
     $(selectWay).on('change',function(){
@@ -13,7 +17,7 @@ let getDepartureTimesFor70MarsTerWorkingDays=function(){
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Füvészkert'){
-            departureTimes70MarsTerToFuveszkertWorkingDays();/*Mars tér felé*/
+            departureTimes70MarsTerToFuveszkertWorkingDays();/*Füvészkert felé*/
         }
     });
 };
@@ -23,9 +27,9 @@ let getDepartureTimesFor70SzechenyiTerTerWorkingDays=function(){
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Füvészkert'){
-            departureTimes70SzechenyiTerToFuveszkertWorkingDays();/*Mars tér felé*/
+            departureTimes70SzechenyiTerToFuveszkertWorkingDays();/*Füvészkert felé*/
         }else{
-            departureTimes70SzechenyiTerToMarsTerWorkingDays();
+            departureTimes70SzechenyiTerToMarsTerWorkingDays();/*Mars tér felé*/
         }
     });
 };
@@ -67,7 +71,7 @@ let getDepartureTimesFor90HSzegedIpariLogKpWorkingDays=function(){
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Lugas utca'){
-            departureTimes90HSzegedIparuLogKpToLugasUtcaWorkingDays();
+            departureTimes90HSzegedIpariLogKpToLugasUtcaWorkingDays();
         }
     });
 };
@@ -77,7 +81,7 @@ let getDepartureTimesFor90HLugasUtcaWorkingDays=function(){
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Szegedi Ipari Logisztikai Központ'){
-            departureTimes90HLugasUtcaToSzegedIparuLogKpWorkingDays();
+            departureTimes90HLugasUtcaToSzegedIpariLogKpWorkingDays();
         }
     });
 };

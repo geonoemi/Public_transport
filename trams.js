@@ -75,7 +75,6 @@ let select3FStation=function(){
     $(stations3F).each(function() {
         selectStation3F.append($('<option>').attr('value',this.val).text(this.text));
     });
-    departureTimes2SzemelyiPuWorkingDays();
 };
 
 let select4Station=function(){
