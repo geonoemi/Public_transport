@@ -3,14 +3,15 @@ let departureTimes71AKatalinUtcaToMarsTerWorkingDays=function(){
 
     let departureTimes="";
     let times=[];
+    let hours=[];    
     let n=0;
-    let hours=[];
-    for( let h=6; h<22; h++) {	
+    for( let h=6; h<22; h++) {	/*6-22-ig megy az órákon*/
         for(let m=10;m<60;m+=10) {
            
             departureTimes=h+":"+m;
             times[n]=departureTimes;
             hours[n]=departureTimes.slice(0,departureTimes.indexOf(":"));
+            
             n++;
         }
     }	
@@ -24,12 +25,9 @@ let departureTimes71AKatalinUtcaToMarsTerWorkingDays=function(){
 
     let selectHourLabel=$('<label>').attr('class','labels').text('Choose hour').appendTo(timesDiv);
     let selectHour = $('<select>').attr('id','selectHour').appendTo(timesDiv);
-    
-    let h=0;
+
     for(let i=6;i<22;i++){
         selectHour.append($('<option>').text(i));
-       /* hours[h]=i;
-        h++;*/
     }
  
     let pDiv=$('<div>').attr('id', 'pDiv');
@@ -43,36 +41,23 @@ let departureTimes71AKatalinUtcaToMarsTerWorkingDays=function(){
     });
 
     $(selectHour).on('change',function(){ 
+
         $(selectHour).after(departureTimesLabel);
         let chosenHour=$('#selectHour :selected').text();
         console.log(chosenHour); /*látja mit választott */
-        let hourP;
+       
         for(let j=hours[0];j<hours.length;j++){
         
             if(hours[j]===(chosenHour)){
                 if((times[j]).startsWith(hours[j])){
+                    console.log(times[j]);
                             
-                    hourP=$('<p>').attr('class','hoursP').text(times[j]);     
-
-                } 
-                pDiv.append(hourP);
-
-               /* for(let i=0;i<times.length;i++){
-
-                    if((times[i]).startsWith(hours[j])){
-                            
-                        hourP=$('<p>').attr('class','hoursP').text(times[i]);     
- 
-                    } 
+                    let hourP=$('<p>').attr('class','hoursP').text(times[j]);     
                     pDiv.append(hourP);
-
-                }*/  
-    
+                } 
             }
-       
         }
     });        
-
 };
 
 let departureTimes71AKatalinUtcaToNapfenyfurdoWorkingDays=function(){
