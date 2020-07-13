@@ -4,4 +4,3 @@ let tramsTXT=`[
 4,false,true,180,55,true,0,false,electrical energy,false,tram
 ]`;
 tramsTXT.split(',');
-console.log(tramsTXT);  //.split('\n')
