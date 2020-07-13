@@ -1,6 +1,4 @@
 /*71A from Katalin utca*/
-
-
 let departureTimes71AKatalinUtcaToMarsTerWorkingDays=function(){
 
     for( let h=6; h<22; h++) {	/*6-22-ig megy az órákon*/
