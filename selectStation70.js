@@ -50,7 +50,7 @@ let select70Station=function(){
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
             selectWay70();
-            getDepartureTimesFor70SzechenyiTerTerWorkingDays();
+            getDepartureTimesFor70SzechenyiTerWorkingDays();
         }
     });
 };

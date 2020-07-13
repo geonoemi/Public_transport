@@ -22,7 +22,7 @@ let getDepartureTimesFor70MarsTerWorkingDays=function(){
     });
 };
 
-let getDepartureTimesFor70SzechenyiTerTerWorkingDays=function(){
+let getDepartureTimesFor70SzechenyiTerWorkingDays=function(){
     
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();

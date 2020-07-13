@@ -22,7 +22,6 @@ let selectWay71A=function(){
     $(way).each(function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
-
 };
 
 let selectWay90H=function(){

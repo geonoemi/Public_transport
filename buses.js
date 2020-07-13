@@ -1,6 +1,6 @@
-let chosenBus="";
+let chosenBus;
 
-let busFunction=function(){
+let appendBuses=function(){
 
     let busDiv=$('<div>').attr('id', 'busDiv');
     let label= $('<label>').attr('class','labels').text('Choose bus');  
@@ -18,9 +18,11 @@ let busFunction=function(){
     $(bus).each(function() {
      selectBus.append($('<option>').attr('value',this.val).text(this.text));
     });
+
+    chooseBus();
 };
 
-let selectBusFunction=function(){
+let chooseBus=function(){
 
     $(selectBus).on('change',function(){ 
 

@@ -22,23 +22,14 @@ let tramFunction=function(){
     $(button2).on('click',function(){
         console.log('2-es gomb felirata:'+(this).val());
     });
+    
+    selectTramFunction();
 };
-
-    /*let selectTram = $('<select>').attr('id','selectTram').appendTo('.optionDiv');*/
-    /*  $(trams).each(function() {
-     selectTram.append($('<option>').attr('value',this.val).text(this.text));
-    });*/
-
 
 let selectTramFunction=function(){
 
 };
-   /* $('#selectTram').on('change',function(){ 
-        let isEmpty=  $('#selectTram').next();
-        if(isEmpty.children().length>0){
-            isEmpty.children().remove();     
-        }
-    });   */
+   
 
 let select2Station=function(){
     let stations2 = [

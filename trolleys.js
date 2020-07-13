@@ -1,6 +1,6 @@
 let chosenTrolley="";
 
-let trolleyFunction=function(){
+let appendTrolleys=function(){
     let trolleyDiv=$('<div>').attr('id', 'trolleyDiv');
     let label= $('<label>').attr('class','labels').text('Choose trolley');  
     $('.optionDiv').append(label); 
@@ -15,9 +15,11 @@ let trolleyFunction=function(){
     $(trolley).each(function() {
      selectTrolley.append($('<option>').attr('value',this.val).text(this.text));
     });
+
+    chooseTrolley();
 };
 
-let selectTrolleyFunction=function(){
+let chooseTrolley=function(){
 
     $('#selectTrolley').on('change',function(){ 
         let isEmpty=  $('#selectTrolley').next();
@@ -75,7 +77,7 @@ let select8Station=function(){
         selectedStation8=$('#selectStation8 :selected').text();
     
         if(((selectedStation8)==='Klinikák')||((selectedStation8)==='Makkosház')) {
-            console.log(selectedStation8);
+
                 let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
                 let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
                 $('#trolleyDiv').append(selectWayDiv);
@@ -115,8 +117,7 @@ let select10Station=function(){
 
     $('#selectStation10').on('change', function(){
     
-        let empty=$('#selectStation10 :selected').text();
-            console.log(empty);
+        
             if(stations10Div.next().length>0){
             stations10Div.next().remove();     
             }
