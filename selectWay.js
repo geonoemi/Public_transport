@@ -47,7 +47,6 @@ let selectWay8=function(){
 }
 
 
-
 let selectWay10=function(){
     let way=[
         {val : 1, text: 'Víztorony-tér'},
@@ -61,11 +60,13 @@ let selectWay10=function(){
 
 
 let selectWay19=function(){
+
     let way=[
         {val : 1, text: 'Szegedi Ipari Logisztikai Központ'},
         {val : 2, text : 'Lugas utca'}
     ];
     let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+    
     $(way).each(function(){
         $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
     });
