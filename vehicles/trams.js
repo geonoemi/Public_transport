@@ -1,6 +1,7 @@
 let chosenTram="";
 
 let tramFunction=function(){
+
     let tramsDiv=$('<div>').attr('id', 'tramsDiv');
     let label= $('<label>').attr('class','labels').text('Choose tram');  
     $('.optionDiv').append(label); 
@@ -9,7 +10,6 @@ let tramFunction=function(){
     
     $(tramsDiv).append(buttonDiv);
     let button2=$('<button>').attr('class','button').attr('value','2').text('2');
-    console.log(button2.text());
     let button3F=$('<button>').attr('class','button').text('3F');
     let button4=$('<button>').attr('class','button').text('4');
 
@@ -18,10 +18,6 @@ let tramFunction=function(){
     $(buttonDiv).append(button4);
 
     $('.optionDiv').append(tramsDiv);
-   
-   /* $(button2).on('click',function(){
-        console.log('2-es gomb felirata:'+(this).val());
-    });*/
     
     selectTramFunction();
 };
@@ -29,7 +25,25 @@ let tramFunction=function(){
 let selectTramFunction=function(){
 
     $('.button').on('click', function(){
+        
+        let isEmpty=  $(buttonDiv).next();
+
+        if(isEmpty.length>0){
+            isEmpty.remove();     
+        }
         console.log("clicked button: "+$(this).text());
+        chosenTram=$(this).text();
+        console.log('chosenTram: '+chosenTram);
+
+        if(chosenTram=='2'){
+            select2Station();
+        }
+        if(chosenTram=='3F'){
+            select3FStation();
+        }
+        if(chosenTram=='4'){
+            select4Station();
+        }
     });
 };
    
