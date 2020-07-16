@@ -3,8 +3,11 @@
 <head>
 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Schedule</title>
 <script src="jquery-3.4.1.min.js"></script>
+
 <link rel="stylesheet" href="styles.css">
 
 <script src="vehicles/trams.js"></script>
@@ -30,15 +33,6 @@
 <script src="departureTimes/departureTimes19.js"></script>
 <script src="schedule.js"></script>
 
-<script>
- /*működő selected kiírás
- 
- $(document).ready(function(){ 
-        $('#vehicles').click(function(){ 
-          console.log($('#vehicles :selected').text());
-        });
-      });*/      
-</script>
 </head>
 
 <body>
@@ -47,14 +41,15 @@
         <label class="labels" for="vehicles">Choose vehicle</label>
     </div>
     <div id="imgs">
-      <div id="tramImgDiv"><img id="tramIMG" src="imgs/tram.jpg" alt="img"></div>
+      <div id="tramImgDiv"><img id="tramIMG" src="imgs/tram.jpg"  alt="img"></div>
       <div id="busImgDiv"><img id="busIMG" src="imgs/bus.jpg" alt="img"></div>
       <div id="trolleyImgDiv"><img id="trolleyIMG" src="imgs/trolley.jpg" alt="img"></div>
 
-
-
     </div>
       <!--<select id="vehicles">
+
+         style="width:20%;"
+
             <option value="Vehicle">Vehicle</option>
             <option value="Bus">Bus</option>
             <option value="Tram">Tram</option>
@@ -62,7 +57,21 @@
            </select>-->  
     </div>
 
- <!--  <div id="imgDiv"><img id="publicTransportIMG" src="publicTransport.jpg" alt="img"></div>-->
+ <!--  <div id="imgDiv"><img id="publicTransportIMG" src="publicTransport.jpg" alt="img"></div>
+
+
+
+  térképet beszúrni a megállókkal
+  gomb problémát megoldani a 2-es villamosnál
+  2-es villamos menetrendet megírni
+  megoldani, hogy a választási opcióknál a legelsőt is figyelembe vegye
+  néhány járat csak 9-től indul, pedig 6-tól kéne
+  reszponzivitás
+  logó a közlekedési társaságról
+
+ 
+
+  -->
 
     <div class="optionDiv"></div>
   </div>   
