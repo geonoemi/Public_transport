@@ -1,3 +1,42 @@
+selectWay2=function(){
+
+    let way=[
+        {val : 1, text: 'Személyi pályaudvar'},
+        {val : 2, text : 'Európa-liget'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+};
+
+selectWay3F=function(){
+
+    let way=[
+        {val : 1, text: 'Tarján'},
+        {val : 2, text : 'Fonógyári út'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+};
+
+selectWay4=function(){
+
+    let way=[
+        {val : 1, text: 'Tarján'},
+        {val : 2, text : 'Kecskés'}
+    ];
+    let selectWay = $('<select>').attr('id','selectWay').appendTo(selectWayDiv);
+
+    $(way).each(function(){
+        $(selectWay).append($('<option>').attr('value', this.val).text(this.text));
+    });
+};
+
 selectWay70=function(){
 
     let way=[

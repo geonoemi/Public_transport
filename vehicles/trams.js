@@ -31,7 +31,7 @@ let selectTramFunction=function(){
         if(isEmpty.length>0){
             isEmpty.remove();     
         }
-        
+
         chosenTram=$(this).text();
 
         if(chosenTram=='2'){
@@ -45,5 +45,15 @@ let selectTramFunction=function(){
         }
     });
 };
+let selectWayFunction=function(){
+    
+    let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+    let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+    $('#tramsDiv').append(selectWayDiv);
+    $(selectWayDiv).append(selectWayLabel);
+    if(selectWayDiv.children().length>0){
+        selectWayDiv.children().remove();
+    }
+}
    
 
