@@ -63,3 +63,37 @@ let getDepartureTimesFor3FFonogyariUtWorkingDays=function(){
         }
     }); 
 }
+
+let getDepartureTimesFor4TarjanWorkingDays=function(){
+
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Kecskés'){
+            departureTimesFor3FTarjanToKecskesWorkingDays();
+        }
+    }); 
+}
+
+let getDepartureTimesFor4FDugonicsTerWorkingDays=function(){
+
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Tarján'){
+            departureTimesFor3FDugonicsTerToTarjanWorkingDays();
+        }
+        if((selectedWay)==='Kecskés'){
+            departureTimesFor3FDugonicsTerToKecskesWorkingDays();
+        }
+    }); 
+}
+
+let getDepartureTimesFor4KecskesWorkingDays=gunction(){
+
+    $(selectWay).on('change',function(){
+        let selectedWay=$('#selectWay :selected').text();
+        if((selectedWay)==='Tarján'){
+            departureTimesFor3FKecskesToTarjanWorkingDays();
+        }
+      
+    }); 
+}
