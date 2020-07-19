@@ -6,30 +6,57 @@ let appendBuses=function(){
     let label= $('<label>').attr('class','labels').text('Choose bus');  
     $('.optionDiv').append(label); 
     
-    let bus = [
+    let buttonDiv = $('<div>').attr('id','buttonDiv');
+    $(busDiv).append(buttonDiv);
+
+    let button70=$('<button>').attr('class','button').text('70');
+    let button71A=$('<button>').attr('class','button').text('71A');
+    let button90H=$('<button>').attr('class','button').text('90H');
+
+    $(buttonDiv).append(button70);
+    $(buttonDiv).append(button71A);
+    $(buttonDiv).append(button90H);
+  /*  let bus = [
                 {val : 1, text: '70'},
                 {val : 2, text: '71A'},
                 {val : 3, text: '90H'}
     ];    
 
     let selectBus = $('<select>').attr('id','selectBus').appendTo('.optionDiv');
-    $('.optionDiv').append(busDiv);
 
     $(bus).each(function() {
      selectBus.append($('<option>').attr('value',this.val).text(this.text));
-    });
+    });*/
 
+    $('.optionDiv').append(busDiv);
     chooseBus();
 };
 
 let chooseBus=function(){
 
-    $(selectBus).on('change',function(){ 
+    $('.button').on('click', function(){
+        
+        emptyButton();
 
-        let isEmpty=  $(selectBus).next();
+        chosenBus=$(this).text();
 
-        if(isEmpty.children().length>0){
-            isEmpty.children().remove();     
+        if(chosenBus=='70'){
+            select70Station();
+        }
+        if(chosenBus=='71A'){
+            select71AStation();  
+        }
+        if(chosenBus=='90H'){
+            select90HStation();
+        }
+    });
+};
+
+  /*  $(selectBus).on('change',function(){ 
+
+        let empty=  $(selectBus).next();
+        if(empty.children().length>0){
+            empty.children().remove();     
         }
     });   
 
@@ -53,7 +80,7 @@ let chooseBus=function(){
             select90HStation();
         }
     });    
-};
+};*/
 
 
 

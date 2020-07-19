@@ -1,15 +1,15 @@
 let chosenTram="";
 
-let tramFunction=function(){
+let appendTrams=function(){
 
     let tramsDiv=$('<div>').attr('id', 'tramsDiv');
     let label= $('<label>').attr('class','labels').text('Choose tram');  
     $('.optionDiv').append(label); 
     
     let buttonDiv = $('<div>').attr('id','buttonDiv');
-    
     $(tramsDiv).append(buttonDiv);
-    let button2=$('<button>').attr('class','button').attr('value','2').text('2');
+
+    let button2=$('<button>').attr('class','button').text('2');
     let button3F=$('<button>').attr('class','button').text('3F');
     let button4=$('<button>').attr('class','button').text('4');
 
@@ -18,8 +18,7 @@ let tramFunction=function(){
     $(buttonDiv).append(button4);
 
     $('.optionDiv').append(tramsDiv);
-    
-    selectTramFunction();
+    chooseTram();
 };
 
 let emptyButton=function(){
@@ -29,7 +28,7 @@ let emptyButton=function(){
         }
 };
 
-let selectTramFunction=function(){
+let chooseTram=function(){
 
     $('.button').on('click', function(){
         

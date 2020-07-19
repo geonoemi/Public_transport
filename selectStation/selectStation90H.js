@@ -30,7 +30,9 @@ let select90HStation=function(){
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay90H();
+            emptyButton();
             getDepartureTimesFor90HSzegedIpariLogKpWorkingDays();
         }
         if((selectedStation90H)==='Rókusi víztorony') {
@@ -39,6 +41,7 @@ let select90HStation=function(){
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
             selectWay90H();
+            emptyButton();
             getDepartureTimesFor90HRokusiViztoronyWorkingDays();
         }
         if((selectedStation90H)==='Lugas utca') {
@@ -47,6 +50,7 @@ let select90HStation=function(){
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
             selectWay90H();
+            emptyButton();
             getDepartureTimesFor90HLugasUtcaWorkingDays();
         }
     });

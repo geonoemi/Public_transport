@@ -16,7 +16,7 @@ let select2Station=function(){
         selectStation2.append($('<option>').attr('value',this.val).text(this.text));
     });
 
-    $('#selectStation2').on('change', function(){
+    $(selectStation2).on('change', function(){
         
         if(stations2Div.next().length>0){
             stations2Div.next().remove();     
@@ -28,7 +28,7 @@ let select2Station=function(){
                 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#tramsDiv').append(selectWayDiv);
+            $(tramsDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay2();

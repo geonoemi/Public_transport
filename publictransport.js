@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     $('#tramIMG').on('click',function(){   
         $('#main').remove();
-        tramFunction();
+        appendTrams();
     });
 
     $('#busIMG').on('click',function(){   

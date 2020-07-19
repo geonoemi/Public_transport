@@ -31,7 +31,9 @@ let select70Station=function(){
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay70();
+            emptyButton();
             getDepartureTimesFor70FuveszkertWorkingDays();
         }
         if((selectedStation70)==='Mars-tér') {
@@ -40,7 +42,9 @@ let select70Station=function(){
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay70();
+            emptyButton();
             getDepartureTimesFor70MarsTerWorkingDays();
         }
         if((selectedStation70)==='Széchenyi-tér') {
@@ -49,7 +53,9 @@ let select70Station=function(){
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay70();
+            emptyButton();
             getDepartureTimesFor70SzechenyiTerWorkingDays();
         }
     });

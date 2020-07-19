@@ -31,7 +31,9 @@ let select71AStation=function(){
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay71A();
+            emptyButton();
             getDepartureTimesFor71AKatalinUtcaWorkingDays();
         }
         if((selectedStation71A)==='Mars-tér'){
@@ -40,7 +42,9 @@ let select71AStation=function(){
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay71A();
+            emptyButton();
             getDepartureTimesFor71AMarsTerWorkingDays();
         }
         if((selectedStation71A)==='Napfényfürdő'){
@@ -49,7 +53,9 @@ let select71AStation=function(){
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
             $(busDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay71A();
+            emptyButton();
             getDepartureTimesFor71ANapfenyfurdoWorkingDays();
         }
     });
