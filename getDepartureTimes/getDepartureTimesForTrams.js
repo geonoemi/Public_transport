@@ -87,7 +87,7 @@ let getDepartureTimesFor4FDugonicsTerWorkingDays=function(){
     }); 
 }
 
-let getDepartureTimesFor4KecskesWorkingDays=gunction(){
+let getDepartureTimesFor4KecskesWorkingDays=function(){
 
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();

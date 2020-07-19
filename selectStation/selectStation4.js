@@ -26,22 +26,37 @@ let select4Station=function(){
 
         if(((selectedStation4)==='Tarján')) { 
 
-            selectWayFunction();
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $('#tramsDiv').append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+
             selectWay4();
+            emptyButton();
             getDepartureTimesFor4TarjanWorkingDays();
         };
 
         if(((selectedStation4)==='Dugonics-tér')) { 
 
-            selectWayFunction();
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $('#tramsDiv').append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+
             selectWay4();
+            emptyButton();
             getDepartureTimesFor4FDugonicsTerWorkingDays();
         };
         
         if(((selectedStation4)==='Kecskés')) { 
 
-            selectWayFunction();
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $('#tramsDiv').append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+
             selectWay4();
+            emptyButton();
             getDepartureTimesFor4KecskesWorkingDays();
         };
     });

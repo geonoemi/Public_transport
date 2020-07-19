@@ -16,7 +16,7 @@ let select3FStation=function(){
     });
 
     $('#selectStation3F').on('change', function(){
-    
+        
         if(stations3FDiv.next().length>0){
             stations3FDiv.next().remove();     
         }
@@ -25,22 +25,40 @@ let select3FStation=function(){
 
         if(((selectedStation3F)==='Tarján')) { 
 
-            selectWayFunction();
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $('#tramsDiv').append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            
             selectWay3F();
+
+            emptyButton();
             getDepartureTimesFor3FTarjanWorkingDays();
         }
 
         if(((selectedStation3F)==='Dugonics-tér')) { 
 
-            selectWayFunction();
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $('#tramsDiv').append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+
             selectWay3F();
+
+            emptyButton();
             getDepartureTimesFor3FDugonicsTerWorkingDays();
         }
         
         if(((selectedStation3F)==='Fonógyári út')) { 
 
-            selectWayFunction();
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $('#tramsDiv').append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+
             selectWay3F();
+
+            emptyButton();
             getDepartureTimesFor3FFonogyariUtWorkingDays();
         }
     });

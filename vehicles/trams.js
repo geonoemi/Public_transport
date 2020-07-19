@@ -22,15 +22,18 @@ let tramFunction=function(){
     selectTramFunction();
 };
 
+let emptyButton=function(){
+    let empty=  $(buttonDiv).next();
+        if(empty.length>0){
+            empty.remove();     
+        }
+};
+
 let selectTramFunction=function(){
 
     $('.button').on('click', function(){
         
-        let isEmpty=  $(buttonDiv).next();
-
-        if(isEmpty.length>0){
-            isEmpty.remove();     
-        }
+        emptyButton();
 
         chosenTram=$(this).text();
 
@@ -45,15 +48,6 @@ let selectTramFunction=function(){
         }
     });
 };
-let selectWayFunction=function(){
-    
-    let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-    let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-    $('#tramsDiv').append(selectWayDiv);
-    $(selectWayDiv).append(selectWayLabel);
-    if(selectWayDiv.children().length>0){
-        selectWayDiv.children().remove();
-    }
-}
+
    
 
