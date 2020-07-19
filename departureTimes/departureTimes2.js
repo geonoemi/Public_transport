@@ -20,7 +20,8 @@ let departureTimesFor2AnnaKutToSzemelyiPalyaUdvarWorkingDays=function(){
             n++;
         }
     }
-}
+    schedule(); 
+};
 
 let departureTimesFor2AnnaKutToEuropaLigetWorkingDays=function(){
     
@@ -32,9 +33,10 @@ let departureTimesFor2AnnaKutToEuropaLigetWorkingDays=function(){
             n++;
         }
     }
-}
+    schedule(); 
+};
 
-let departureTimesFor2SzemelyiPalyaUdvarToMarsTerWorkingDays=function(){
+let departureTimesFor2EuropaLigetToSzemelyiPalyaudvarWorkingDays=function(){
     
     for(let h=6; h<22;h++){
         for(let m=10;m<60;m+=10){
@@ -44,4 +46,5 @@ let departureTimesFor2SzemelyiPalyaUdvarToMarsTerWorkingDays=function(){
             n++;
         }
     }
-}
+    schedule(); 
+};

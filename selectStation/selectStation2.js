@@ -32,7 +32,6 @@ let select2Station=function(){
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay2();
-
             emptyButton();
             getDepartureTimesFor2SzemelyiPalyaUdvarWorkingDays();
         }
@@ -45,7 +44,6 @@ let select2Station=function(){
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay2();
-
             emptyButton();
             getDepartureTimesFor2AnnaKutWorkingDays();
         }
@@ -58,7 +56,6 @@ let select2Station=function(){
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay2();
-
             emptyButton();
             getDepartureTimesFor2EuropaLigetWorkingDays();
         }

@@ -8,7 +8,8 @@ let departureTimesFor3FTarjanToFonogyariUtWorkingDays=function(){
             n++;
         }
     }
-}
+    schedule(); 
+};
 
 let departureTimesFor3FDugonicsTerToFonogyariUtWorkingDays=function(){
    
@@ -20,7 +21,8 @@ let departureTimesFor3FDugonicsTerToFonogyariUtWorkingDays=function(){
             n++;
         }
     }
-}
+    schedule(); 
+};
 
 let departureTimesFor3FDugonicsTerToTarjantWorkingDays=function(){
     
@@ -32,7 +34,9 @@ let departureTimesFor3FDugonicsTerToTarjantWorkingDays=function(){
             n++;
         }
     }
-}
+    schedule(); 
+};
+
 let departureTimesFor3FFonogyariUtToTarjanWorkingDays=function(){
     
     for(let h=6; h<22;h++){
@@ -43,4 +47,5 @@ let departureTimesFor3FFonogyariUtToTarjanWorkingDays=function(){
             n++;
         }
     }
-}
+    schedule(); 
+};

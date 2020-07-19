@@ -26,7 +26,7 @@ let getDepartureTimesFor2EuropaLigetWorkingDays=function(){
     $(selectWay).on('change',function(){
         let selectedWay=$('#selectWay :selected').text();
         if((selectedWay)==='Személyi pályaudvar'){
-            departureTimesFor2SzemelyiPalyaUdvarToMarsTerWorkingDays();
+            departureTimesFor2EuropaLigetToSzemelyiPalyaudvarWorkingDays();
         }
     }); 
 };
