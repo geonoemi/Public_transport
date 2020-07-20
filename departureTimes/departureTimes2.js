@@ -1,23 +1,18 @@
+
 let departureTimesFor2SzemelyiPalyaUdvarToEuropaLigetWorkingDays=function(){
 
-    for(let h=6; h<22;h++){
-        for(let m=10;m<60;m+=10){
-            departureTimes=h+":"+m;
-            times[n]=departureTimes;
-            hours[n]=departureTimes.slice(0,departureTimes.indexOf(":"));
-            n++;
+    for( h=6; h<22;h++){
+        for( m=3;m<60;m+=10){
+            departureTimesFunction();
         }
     }
 }
 
 let departureTimesFor2AnnaKutToSzemelyiPalyaUdvarWorkingDays=function(){
 
-    for(let h=6; h<22;h++){
-        for(let m=15;m<60;m+=10){
-            departureTimes=h+":"+m;
-            times[n]=departureTimes;
-            hours[n]=departureTimes.slice(0,departureTimes.indexOf(":"));
-            n++;
+    for( h=6; h<22;h++){
+        for( m=8;m<60;m+=10){
+            departureTimesFunction();
         }
     }
     schedule(); 
@@ -25,12 +20,9 @@ let departureTimesFor2AnnaKutToSzemelyiPalyaUdvarWorkingDays=function(){
 
 let departureTimesFor2AnnaKutToEuropaLigetWorkingDays=function(){
     
-    for(let h=6; h<22;h++){
-        for(let m=15;m<60;m+=10){
-            departureTimes=h+":"+m;
-            times[n]=departureTimes;
-            hours[n]=departureTimes.slice(0,departureTimes.indexOf(":"));
-            n++;
+    for( h=6; h<22;h++){
+        for( m=15;m<60;m+=10){
+            departureTimesFunction();
         }
     }
     schedule(); 
@@ -38,12 +30,9 @@ let departureTimesFor2AnnaKutToEuropaLigetWorkingDays=function(){
 
 let departureTimesFor2EuropaLigetToSzemelyiPalyaudvarWorkingDays=function(){
     
-    for(let h=6; h<22;h++){
-        for(let m=10;m<60;m+=10){
-            departureTimes=h+":"+m;
-            times[n]=departureTimes;
-            hours[n]=departureTimes.slice(0,departureTimes.indexOf(":"));
-            n++;
+    for( h=6; h<22;h++){
+        for( m=7;m<60;m+=10){
+            departureTimesFunction();
         }
     }
     schedule(); 
