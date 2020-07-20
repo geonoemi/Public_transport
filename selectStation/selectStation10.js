@@ -18,28 +18,33 @@ let select10Station=function(){
     $('#selectStation10').on('change', function(){
     
         
-            if(stations10Div.next().length>0){
+        if(stations10Div.next().length>0){
             stations10Div.next().remove();     
-            }
+        }
       
         selectedStation10=$('#selectStation10 :selected').text();
     
-        if(((selectedStation10)==='Klinikák')) { //||((selectedStation10)==='Víztorony-tér')
-            console.log(selectedStation10);
-                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $('#trolleyDiv').append(selectWayDiv);
-                $(selectWayDiv).append(selectWayLabel);
-                selectWay10();
-                getDepartureTimesFor10KlinikakWorkingDays();
-        }
-        if(((selectedStation10)==='Víztorony-tér')) { 
-        console.log(selectedStation10);
+        if(((selectedStation10)==='Klinikák')) { 
+
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#trolleyDiv').append(selectWayDiv);
+            $(trolleyDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+              
             selectWay10();
+            emptyButton();
+            getDepartureTimesFor10KlinikakWorkingDays();
+        }
+
+        if(((selectedStation10)==='Víztorony-tér')) { 
+
+            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+            $(trolleyDiv).append(selectWayDiv);
+            $(selectWayDiv).append(selectWayLabel);
+            
+            selectWay10();
+            emptyButton();
             getDepartureTimesFor10ViztoronyTerWorkingDays();
 
     }

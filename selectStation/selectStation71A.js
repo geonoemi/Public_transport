@@ -20,7 +20,7 @@ let select71AStation=function(){
     $(selectStation71A).on('change', function(){
     
         if(stations71ADiv.next().length>0){
-        stations71ADiv.next().remove();     
+            stations71ADiv.next().remove();     
         }
       
         selectedStation71A=$('#selectStation71A :selected').text();
@@ -36,6 +36,7 @@ let select71AStation=function(){
             emptyButton();
             getDepartureTimesFor71AKatalinUtcaWorkingDays();
         }
+
         if((selectedStation71A)==='Mars-tér'){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
@@ -47,6 +48,7 @@ let select71AStation=function(){
             emptyButton();
             getDepartureTimesFor71AMarsTerWorkingDays();
         }
+
         if((selectedStation71A)==='Napfényfürdő'){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');

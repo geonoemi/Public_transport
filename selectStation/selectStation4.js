@@ -28,7 +28,7 @@ let select4Station=function(){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#tramsDiv').append(selectWayDiv);
+            $(tramsDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay4();
@@ -40,7 +40,7 @@ let select4Station=function(){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#tramsDiv').append(selectWayDiv);
+            $(tramsDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay4();
@@ -52,7 +52,7 @@ let select4Station=function(){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#tramsDiv').append(selectWayDiv);
+            $(tramsDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay4();

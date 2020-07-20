@@ -24,23 +24,26 @@ let select8Station=function(){
       
         selectedStation8=$('#selectStation8 :selected').text();
     
-        if(((selectedStation8)==='Klinikák')) { //||((selectedStation8)==='Makkosház')
-
+        if(((selectedStation8)==='Klinikák')) { 
                 let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
                 let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $('#trolleyDiv').append(selectWayDiv);
+                $(trolleyDiv).append(selectWayDiv);
                 $(selectWayDiv).append(selectWayLabel);
+
                 selectWay8();
+                emptyButton();
                 getDepartureTimesFor8KlinikakWorkingDays();
         }
 
-        if(((selectedStation8)==='Makkosház')) { //||((selectedStation8)==='Makkosház')
+        if(((selectedStation8)==='Makkosház')) { 
 
                 let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
                 let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $('#trolleyDiv').append(selectWayDiv);
+                $(trolleyDiv).append(selectWayDiv);
                 $(selectWayDiv).append(selectWayLabel);
+
                 selectWay8();
+                emptyButton();
                 getDepartureTimesFor8MakkoshazWorkingDays();
         }
     });

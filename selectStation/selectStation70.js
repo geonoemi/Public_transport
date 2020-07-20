@@ -36,6 +36,7 @@ let select70Station=function(){
             emptyButton();
             getDepartureTimesFor70FuveszkertWorkingDays();
         }
+
         if((selectedStation70)==='Mars-tér') {
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
@@ -47,6 +48,7 @@ let select70Station=function(){
             emptyButton();
             getDepartureTimesFor70MarsTerWorkingDays();
         }
+        
         if((selectedStation70)==='Széchenyi-tér') {
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');

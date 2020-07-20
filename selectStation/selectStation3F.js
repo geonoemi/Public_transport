@@ -27,39 +27,36 @@ let select3FStation=function(){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#tramsDiv').append(selectWayDiv);
+            $(tramsDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
             
             selectWay3F();
-
             emptyButton();
             getDepartureTimesFor3FTarjanWorkingDays();
-        }
+        };
 
         if(((selectedStation3F)==='Dugonics-tér')) { 
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#tramsDiv').append(selectWayDiv);
+            $(tramsDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay3F();
-
             emptyButton();
             getDepartureTimesFor3FDugonicsTerWorkingDays();
-        }
+        };
         
         if(((selectedStation3F)==='Fonógyári út')) { 
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#tramsDiv').append(selectWayDiv);
+            $(tramsDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
 
             selectWay3F();
-
             emptyButton();
             getDepartureTimesFor3FFonogyariUtWorkingDays();
-        }
+        };
     });
 };

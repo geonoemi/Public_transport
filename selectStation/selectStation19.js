@@ -18,9 +18,9 @@ let select19Station=function(){
 
     $('#selectStation19').on('change', function(){
     
-            if(stations19Div.next().length>0){
+        if(stations19Div.next().length>0){
             stations19Div.next().remove();     
-            }
+        }
       
         selectedStation19=$('#selectStation19 :selected').text();
     
@@ -28,9 +28,11 @@ let select19Station=function(){
 
                 let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
                 let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $('#trolleyDiv').append(selectWayDiv);
+                $(trolleyDiv).append(selectWayDiv);
                 $(selectWayDiv).append(selectWayLabel);
+                
                 selectWay19();
+                emptyButton();
                 getDepartureTimesFor19SzegedIpariLogisztikaiKozpontWorkingDays();
         }
 
@@ -38,9 +40,11 @@ let select19Station=function(){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#trolleyDiv').append(selectWayDiv);
+            $(trolleyDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+
             selectWay19();
+            emptyButton();
             getDepartureTimesFor19RokusiViztoronyWorkingDays();
         }
 
@@ -48,9 +52,11 @@ let select19Station=function(){
 
             let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
             let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $('#trolleyDiv').append(selectWayDiv);
+            $(trolleyDiv).append(selectWayDiv);
             $(selectWayDiv).append(selectWayLabel);
+          
             selectWay19();
+            emptyButton();
             getDepartureTimesFor19LugasUtcaWorkingDays();
         }
     });
