@@ -1,16 +1,3 @@
-let h;
-let m;
-
-
-let departureTimesFunction=function(){
-    
-    
-    departureTimes=h+":"+m;
-    times[n]=departureTimes;
-    hours[n]=departureTimes.slice(0,departureTimes.indexOf(":"));
-    n++;
-}
-
 let departureTimesFor3FTarjanToFonogyariUtWorkingDays=function(){
 
     for( h=6; h<22;h++){

@@ -1,7 +1,17 @@
 let departureTimes="";
-let times=[];
-let hours=[];    
-let n=0;
+    let times=[];
+    let hours=[];    
+    let n=0;
+    let h;
+    let m;   
+
+let departureTimesFunction=function(){
+    
+    departureTimes=h+":"+m;
+    times[n]=departureTimes;
+    hours[n]=departureTimes.slice(0,departureTimes.indexOf(":"));
+    n++;
+}
 
 let getDepartureTimesFor70FuveszkertWorkingDays=function(){
     

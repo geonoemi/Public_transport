@@ -1,5 +1,3 @@
-
-
 let getDepartureTimesFor8MakkoshazWorkingDays=function(){
     
     $(selectWay).on('change',function(){

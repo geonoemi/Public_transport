@@ -1,3 +1,5 @@
+
+
 let schedule=function(){
     let departureTimesDiv=$('<div>').attr('id', 'departureTimesDiv');
         let departureTimesLabel=$('<label>').attr('class', 'labels').text("Departure times");
@@ -32,7 +34,9 @@ let schedule=function(){
             
                 if(hours[j]===(chosenHour)){
                     if((times[j]).startsWith(hours[j])){
-                                                    
+                      if (times[j] < 10){
+                        times[j] = '0' + times[j];  
+                      }                 
                         let hourP=$('<p>').attr('class','hoursP').text(times[j]);     
                         pDiv.append(hourP);
                     } 
@@ -40,3 +44,33 @@ let schedule=function(){
             }
         });  
 };
+/*  
+
+var timerId; // current timer if started
+
+function clockStart() {
+  if (timerId) return
+
+  timerId = setInterval(update, 1000);
+  update(); 
+}
+
+
+function update() {
+  var date = new Date();
+
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  if (hours < 10) hours = '0' + hours
+  if (minutes < 10) minutes = '0' + minutes
+  if (document.getElementById('clock')) {
+    document.getElementById('clock').innerHTML = hours + ':' + minutes;
+  }
+
+  if (document.getElementById('clock-medium')) {
+    document.getElementById('clock-medium').innerHTML = hours + ':' + minutes;
+  }
+
+}
+
+*/

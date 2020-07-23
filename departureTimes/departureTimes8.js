@@ -15,4 +15,5 @@ let departureTimes8KlinikakToMakkoshazWorkingDays=function(){
         }
     }	
     schedule(); 
+    
 };
