@@ -26,23 +26,15 @@ let select19Station=function(){
     
         if((selectedStation19)==='Szegedi Ipari Logisztikai Központ') { 
 
-                let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-                let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-                $(trolleyDiv).append(selectWayDiv);
-                $(selectWayDiv).append(selectWayLabel);
-                
-                selectWay19();
-                emptyButton();
-                getDepartureTimesFor19SzegedIpariLogisztikaiKozpontWorkingDays();
+            selectWayTrolleyFunction();
+            selectWay19();
+            emptyButton();
+            getDepartureTimesFor19SzegedIpariLogisztikaiKozpontWorkingDays();
         }
 
         if((selectedStation19)==='Rókusi víztorony') {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(trolleyDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTrolleyFunction();
             selectWay19();
             emptyButton();
             getDepartureTimesFor19RokusiViztoronyWorkingDays();
@@ -50,11 +42,7 @@ let select19Station=function(){
 
         if((selectedStation19)==='Lugas utca') { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(trolleyDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-          
+            selectWayTrolleyFunction();
             selectWay19();
             emptyButton();
             getDepartureTimesFor19LugasUtcaWorkingDays();

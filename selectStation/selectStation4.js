@@ -26,11 +26,7 @@ let select4Station=function(){
 
         if(((selectedStation4)==='Tarján')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay4();
             emptyButton();
             getDepartureTimesFor4TarjanWorkingDays();
@@ -38,11 +34,7 @@ let select4Station=function(){
 
         if(((selectedStation4)==='Dugonics-tér')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay4();
             emptyButton();
             getDepartureTimesFor4FDugonicsTerWorkingDays();
@@ -50,11 +42,7 @@ let select4Station=function(){
         
         if(((selectedStation4)==='Kecskés')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay4();
             emptyButton();
             getDepartureTimesFor4KecskesWorkingDays();

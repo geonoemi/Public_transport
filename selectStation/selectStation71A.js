@@ -27,11 +27,7 @@ let select71AStation=function(){
     
         if(((selectedStation71A)==='Katalin utca'))/*||((selectedStation71A)==='Mars-tér') || ((selectedStation71A)==='Napfényfürdő'))*/ {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay71A();
             emptyButton();
             getDepartureTimesFor71AKatalinUtcaWorkingDays();
@@ -39,11 +35,7 @@ let select71AStation=function(){
 
         if((selectedStation71A)==='Mars-tér'){
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay71A();
             emptyButton();
             getDepartureTimesFor71AMarsTerWorkingDays();
@@ -51,11 +43,7 @@ let select71AStation=function(){
 
         if((selectedStation71A)==='Napfényfürdő'){
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay71A();
             emptyButton();
             getDepartureTimesFor71ANapfenyfurdoWorkingDays();

@@ -25,11 +25,7 @@ let select3FStation=function(){
 
         if(((selectedStation3F)==='Tarján')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-            
+            selectWayTramFunction();
             selectWay3F();
             emptyButton();
             getDepartureTimesFor3FTarjanWorkingDays();
@@ -37,11 +33,7 @@ let select3FStation=function(){
 
         if(((selectedStation3F)==='Dugonics-tér')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay3F();
             emptyButton();
             getDepartureTimesFor3FDugonicsTerWorkingDays();
@@ -49,11 +41,7 @@ let select3FStation=function(){
         
         if(((selectedStation3F)==='Fonógyári út')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay3F();
             emptyButton();
             getDepartureTimesFor3FFonogyariUtWorkingDays();

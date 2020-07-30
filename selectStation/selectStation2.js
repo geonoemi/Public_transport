@@ -26,19 +26,26 @@ let select2Station=function(){
 
         if(((selectedStation2)==='Személyi pályaudvar')) { 
                 
-            selectWayFunction();
+            selectWayTramFunction();
+            selectWay2();
+            emptyButton();
             getDepartureTimesFor2SzemelyiPalyaUdvarWorkingDays();
         }
 
         if(((selectedStation2)==='Anna-kút')) { 
 
-            selectWayFunction();
+            selectWayTramFunction();
+            selectWay2();
+            emptyButton();
             getDepartureTimesFor2AnnaKutWorkingDays();
         }
         
         if(((selectedStation2)==='Európa-liget')) { 
 
-            selectWayFunction();
+           
+            selectWayTramFunction();
+            selectWay2();
+            emptyButton();
             getDepartureTimesFor2EuropaLigetWorkingDays();
         }
     });
@@ -46,14 +53,10 @@ let select2Station=function(){
 
 
 
-let selectWayFunction=function(){
-
+let selectWayTramFunction=function(){
 
     let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
     let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
     $(tramsDiv).append(selectWayDiv);
     $(selectWayDiv).append(selectWayLabel);
-
-    selectWay2();
-    emptyButton();
 }

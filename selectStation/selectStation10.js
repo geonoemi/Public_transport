@@ -25,24 +25,16 @@ let select10Station=function(){
         selectedStation10=$('#selectStation10 :selected').text();
     
         if(((selectedStation10)==='Klinikák')) { 
-
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(trolleyDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-              
+            
+            selectWayTrolleyFunction();   
             selectWay10();
             emptyButton();
             getDepartureTimesFor10KlinikakWorkingDays();
         }
 
         if(((selectedStation10)==='Víztorony-tér')) { 
-
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(trolleyDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-            
+           
+            selectWayTrolleyFunction(); 
             selectWay10();
             emptyButton();
             getDepartureTimesFor10ViztoronyTerWorkingDays();

@@ -27,11 +27,7 @@ let select70Station=function(){
     
         if((selectedStation70)==='Füvészkert') {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay70();
             emptyButton();
             getDepartureTimesFor70FuveszkertWorkingDays();
@@ -39,11 +35,7 @@ let select70Station=function(){
 
         if((selectedStation70)==='Mars-tér') {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay70();
             emptyButton();
             getDepartureTimesFor70MarsTerWorkingDays();
@@ -51,11 +43,7 @@ let select70Station=function(){
         
         if((selectedStation70)==='Széchenyi-tér') {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayTramFunction();
             selectWay70();
             emptyButton();
             getDepartureTimesFor70SzechenyiTerWorkingDays();
