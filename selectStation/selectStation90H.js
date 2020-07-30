@@ -27,11 +27,7 @@ let select90HStation=function(){
     
         if((selectedStation90H)==='Szegedi Ipari Logisztikai Központ') {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayBusFunction();
             selectWay90H();
             emptyButton();
             getDepartureTimesFor90HSzegedIpariLogKpWorkingDays();
@@ -39,10 +35,7 @@ let select90HStation=function(){
 
         if((selectedStation90H)==='Rókusi víztorony') {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
+            selectWayBusFunction();
             selectWay90H();
             emptyButton();
             getDepartureTimesFor90HRokusiViztoronyWorkingDays();
@@ -50,11 +43,7 @@ let select90HStation=function(){
 
         if((selectedStation90H)==='Lugas utca') {
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(busDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
+            selectWayBusFunction();
             selectWay90H();
             emptyButton();
             getDepartureTimesFor90HLugasUtcaWorkingDays();

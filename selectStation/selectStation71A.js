@@ -27,7 +27,7 @@ let select71AStation=function(){
     
         if(((selectedStation71A)==='Katalin utca'))/*||((selectedStation71A)==='Mars-tér') || ((selectedStation71A)==='Napfényfürdő'))*/ {
 
-            selectWayTramFunction();
+            selectWayBusFunction();
             selectWay71A();
             emptyButton();
             getDepartureTimesFor71AKatalinUtcaWorkingDays();
@@ -35,7 +35,7 @@ let select71AStation=function(){
 
         if((selectedStation71A)==='Mars-tér'){
 
-            selectWayTramFunction();
+            selectWayBusFunction();
             selectWay71A();
             emptyButton();
             getDepartureTimesFor71AMarsTerWorkingDays();
@@ -43,7 +43,7 @@ let select71AStation=function(){
 
         if((selectedStation71A)==='Napfényfürdő'){
 
-            selectWayTramFunction();
+            selectWayBusFunction();
             selectWay71A();
             emptyButton();
             getDepartureTimesFor71ANapfenyfurdoWorkingDays();
