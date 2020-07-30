@@ -26,37 +26,19 @@ let select2Station=function(){
 
         if(((selectedStation2)==='Személyi pályaudvar')) { 
                 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
-            selectWay2();
-            emptyButton();
+            selectWayFunction();
             getDepartureTimesFor2SzemelyiPalyaUdvarWorkingDays();
         }
 
         if(((selectedStation2)==='Anna-kút')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
-            selectWay2();
-            emptyButton();
+            selectWayFunction();
             getDepartureTimesFor2AnnaKutWorkingDays();
         }
         
         if(((selectedStation2)==='Európa-liget')) { 
 
-            let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
-            let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
-            $(tramsDiv).append(selectWayDiv);
-            $(selectWayDiv).append(selectWayLabel);
-
-            selectWay2();
-            emptyButton();
+            selectWayFunction();
             getDepartureTimesFor2EuropaLigetWorkingDays();
         }
     });
@@ -64,3 +46,14 @@ let select2Station=function(){
 
 
 
+let selectWayFunction=function(){
+
+
+    let selectWayDiv=$('<div>').attr('id', 'selectWayDiv');
+    let selectWayLabel=$('<label>').attr('class','labels').text('Choose way');
+    $(tramsDiv).append(selectWayDiv);
+    $(selectWayDiv).append(selectWayLabel);
+
+    selectWay2();
+    emptyButton();
+}

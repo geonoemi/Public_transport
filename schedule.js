@@ -35,7 +35,7 @@ let schedule=function(){
                 if(hours[j]===(chosenHour)){
                     if((times[j]).startsWith(hours[j])){
                       if (times[j] < 10){
-                        times[j] = '0' + times[j];  
+                          times[j] = '0' + times[j];  
                       }                 
                         let hourP=$('<p>').attr('class','hoursP').text(times[j]);     
                         pDiv.append(hourP);
